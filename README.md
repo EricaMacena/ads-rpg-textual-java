@@ -1,4 +1,4 @@
-# 🎲 Projeto de RPG Textual em Java
+# 🎲🏰 Projeto de RPG Textual em Java 🎭🗡️
 Este é um projeto de RPG textual desenvolvido em Java, onde os jogadores assumem o papel de um personagem imerso em um mundo distópico chamado "Terra Exilada". 
 Neste mundo, uma guerra devastadora deixou metade do planeta em ruínas, e os sobreviventes encontraram refúgio em um local isolado, onde são oprimidos por um 
 governo autoritário que mantém todos aprisionados com um portão fechado.
@@ -39,5 +39,5 @@ Para embarcar em Terra Exilada, siga estes passos simples:
 
 3. **Explorar e Avançar na História:** Siga as instruções fornecidas no jogo para desvendar os mistérios de Terra Exilada. Interaja com os personagens, resolva desafios e faça escolhas significativas que moldarão o desfecho da história.
 
-###  Divirta-se e boa sorte nesta jornada pela liberdade! 🍀🎉🚀
+###  Divirta-se e boa sorte nesta jornada pela liberdade! 🍀🚀
 
