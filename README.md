@@ -25,10 +25,15 @@ O enredo do jogo se desenrola à medida que o jogador interage com os personagen
 escolhas morais e desafios emocionantes. Os jogadores podem encontrar aliados, enfrentar inimigos e tomar decisões que afetam diretamente o curso da narrativa.
 
 ## Características
-- **Escolhas Significativas:** Os jogadores são confrontados com escolhas significativas que moldam o desfecho da história.
-- **Desafios e Quebra-Cabeças:** Para avançar na história, os jogadores devem resolver desafios e quebra-cabeças baseados em lógica e programação.
-- **Desenvolvimento de Personagem:** Conforme os jogadores progridem, seus personagens ganham habilidades e conhecimentos que os ajudam em sua jornada pela liberdade.
-- **Sistema de Diálogo Interativo:** Os jogadores podem interagir com NPCs (Personagens Não Jogáveis) através de um sistema de diálogo interativo, onde suas escolhas influenciam as respostas e ações dos personagens.
+
+- **💡 Escolhas Significativas:** Os jogadores são confrontados com escolhas significativas que moldam o desfecho da história.
+
+- **🧩 Desafios e Quebra-Cabeças:** Para avançar na história, os jogadores devem resolver desafios e quebra-cabeças baseados em lógica e programação.
+
+- **🛠️ Desenvolvimento de Personagem:** Conforme os jogadores progridem, seus personagens ganham habilidades e conhecimentos que os ajudam em sua jornada pela liberdade.
+
+- **💬 Sistema de Diálogo Interativo:** Os jogadores podem interagir com NPCs (Personagens Não Jogáveis) através de um sistema de diálogo interativo, onde suas escolhas influenciam as respostas e ações dos personagens.
+
 
 ## Como Jogar
 Para jogar Terra Exilada: A Batalha pela Liberdade, basta clonar ou baixar este repositório e executar o código-fonte em um ambiente Java adequado. 
