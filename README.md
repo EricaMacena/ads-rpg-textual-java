@@ -4,20 +4,21 @@ Neste mundo, uma guerra devastadora deixou metade do planeta em ruínas, e os so
 governo autoritário que mantém todos aprisionados com um portão fechado.
 
 ## Sobre o Jogo
-<table>
-  <tr>
-    <td><strong>Título:</strong></td>
-    <td>Terra Exilada: A Batalha pela Liberdade</td>
-  </tr>
-  <tr>
-    <td><strong>Gênero:</strong></td>
-    <td>RPG Textual, Aventura, Ficção Científica</td>
-  </tr>
-  <tr>
-    <td><strong>Linguagem de Programação:</strong></td>
-    <td>Java</td>
-  </tr>
-</table>
+
+
+![Rosa Médio #FFB6C1](https://img.shields.io/badge/Terra%20Exilada%3A%20A%20Batalha%20pela%20Liberdade-FFB6C1?style=for-the-badge&labelColor=30A3DC)
+![Aventura](https://img.shields.io/badge/Aventura-FFFFFF?style=for-the-badge&labelColor=1877F2)
+![Ficção Científica](https://img.shields.io/badge/Fic%C3%A7%C3%A3o%20Cient%C3%ADfica-FFB6C1?style=for-the-badge&labelColor=1877F2)
+![Java](https://img.shields.io/badge/Java-FFFFFF?style=for-the-badge&labelColor=1877F2)
+[![Conteúdo de aprendizagem: Loop For](https://img.shields.io/badge/Conte%C3%BAdo%20de%20aprendizagem%3A%20Loop%20For-FFB6C1?style=for-the-badge&labelColor=30A3DC)]()
+
+
+
+
+
+
+
+
 
 ## Enredo
 O enredo do jogo se desenrola à medida que o jogador interage com os personagens e explora o ambiente distópico de Terra Exilada. A história é rica em reviravoltas,
@@ -32,6 +33,5 @@ escolhas morais e desafios emocionantes. Os jogadores podem encontrar aliados, e
 ## Como Jogar
 Para jogar Terra Exilada: A Batalha pela Liberdade, basta clonar ou baixar este repositório e executar o código-fonte em um ambiente Java adequado. 
 Siga as instruções fornecidas no jogo para avançar na história, resolver desafios e desvendar os mistérios de Terra Exilada.
-
 
 
