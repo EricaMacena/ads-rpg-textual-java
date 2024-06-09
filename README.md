@@ -6,9 +6,9 @@ governo autoritário que mantém todos aprisionados com um portão fechado.
 
 ## Sobre o Jogo
 ![Terra Exilada: A Batalha pela Liberdade](https://img.shields.io/badge/Terra%20Exilada%3A%20A%20Batalha%20pela%20Liberdade-ADD8E6?style=for-the-badge&labelColor=000000)
-![Aventura](https://img.shields.io/badge/Aventura-FFFFFF?style=for-the-badge&labelColor=1877F2)
+![Aventura](https://img.shields.io/badge/Aventura-90EE90?style=for-the-badge&labelColor=1877F2)
 ![Ficção Científica](https://img.shields.io/badge/Fic%C3%A7%C3%A3o%20Cient%C3%ADfica-FFFACD?style=for-the-badge&labelColor=000000)
-![Java](https://img.shields.io/badge/Java-FFFFFF?style=for-the-badge&labelColor=1877F2)
+![Java](https://img.shields.io/badge/Java-90EE90?style=for-the-badge&labelColor=1877F2)
 [![Loop For](https://img.shields.io/badge/Conte%C3%BAdo%20de%20aprendizagem%3A%20Loop%20For-ADD8E6?style=for-the-badge&labelColor=000000)]()
 
 
