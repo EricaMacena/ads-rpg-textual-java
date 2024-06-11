@@ -9,7 +9,7 @@ governo autoritário que mantém todos aprisionados com um portão fechado.
 ![Aventura](https://img.shields.io/badge/Aventura-90EE90?style=for-the-badge&labelColor=1877F2)
 ![Ficção Científica](https://img.shields.io/badge/Fic%C3%A7%C3%A3o%20Cient%C3%ADfica-FFFACD?style=for-the-badge&labelColor=000000)
 ![Java](https://img.shields.io/badge/Java-90EE90?style=for-the-badge&labelColor=1877F2)
-[![Loop For](https://img.shields.io/badge/Conte%C3%BAdo%20de%20aprendizagem%3A%20Loop%20For-ADD8E6?style=for-the-badge&labelColor=000000)]()
+[![For](https://img.shields.io/badge/Conte%C3%BAdo%20de%20aprendizagem%3A%20Loop%20For-ADD8E6?style=for-the-badge&labelColor=000000)]()
 
 
 
