@@ -1,10 +1,10 @@
-# 🎲🏰 Projeto de RPG Textual em Java 🎭🗡️
+# 🎲 Projeto de RPG Textual em Java 🎭
 Este é um projeto de RPG textual desenvolvido em Java, onde os jogadores assumem o papel de um personagem imerso em um mundo distópico chamado "Terra Exilada". 
 Neste mundo, uma guerra devastadora deixou metade do planeta em ruínas, e os sobreviventes encontraram refúgio em um local isolado, onde são oprimidos por um 
 governo autoritário que mantém todos aprisionados com um portão fechado.
 
 
-## Sobre o Jogo
+## 🏰 Sobre o Jogo 🗡️
 ![Terra Exilada: A Batalha pela Liberdade](https://img.shields.io/badge/Terra%20Exilada%3A%20A%20Batalha%20pela%20Liberdade-ADD8E6?style=for-the-badge&labelColor=000000)
 ![Aventura](https://img.shields.io/badge/Aventura-90EE90?style=for-the-badge&labelColor=1877F2)
 ![Ficção Científica](https://img.shields.io/badge/Fic%C3%A7%C3%A3o%20Cient%C3%ADfica-FFFACD?style=for-the-badge&labelColor=000000)
@@ -18,7 +18,7 @@ governo autoritário que mantém todos aprisionados com um portão fechado.
 
 
 
-## Enredo
+##  Enredo
 O enredo do jogo se desenrola à medida que o jogador interage com os personagens e explora o ambiente distópico de Terra Exilada. A história é rica em reviravoltas,
 escolhas morais e desafios emocionantes. Os jogadores podem encontrar aliados, enfrentar inimigos e tomar decisões que afetam diretamente o curso da narrativa.
 
