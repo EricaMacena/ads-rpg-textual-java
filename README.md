@@ -5,10 +5,15 @@ governo autoritário que mantém todos aprisionados com um portão fechado.
 
 
 ## 🏰 Sobre o Jogo 🗡️
-![Terra Exilada: A Batalha pela Liberdade](https://img.shields.io/badge/Terra%20Exilada%3A%20A%20Batalha%20pela%20Liberdade-ADD8E6?style=for-the-badge&labelColor=000000)
+![Terra Exilada](https://img.shields.io/badge/Terra%20Exilada-ADD8E6?style=for-the-badge&labelColor=000000)
 ![Aventura](https://img.shields.io/badge/Aventura-90EE90?style=for-the-badge&labelColor=1877F2)
 ![Ficção Científica](https://img.shields.io/badge/Fic%C3%A7%C3%A3o%20Cient%C3%ADfica-FFFACD?style=for-the-badge&labelColor=000000)
 ![Java](https://img.shields.io/badge/Java-90EE90?style=for-the-badge&labelColor=1877F2)
+![Loop For](https://img.shields.io/badge/Loop%20For-ADD8E6?style=for-the-badge&labelColor=000000)
+
+
+
+
 
 
 
@@ -16,14 +21,16 @@ governo autoritário que mantém todos aprisionados com um portão fechado.
 O enredo do jogo se desenrola à medida que o jogador interage com os personagens e explora o ambiente distópico de Terra Exilada. A história é rica em reviravoltas,
 escolhas morais e desafios emocionantes. Os jogadores podem encontrar aliados, enfrentar inimigos e tomar decisões que afetam diretamente o curso da narrativa.
 
-## Conteúdo de aprendizagem 
-**Aprender sobre Loops For:** Se você quiser melhorar suas habilidades de programação Java, confira nosso conteúdo sobre loops for em diferentes níveis de dificuldade:
 
-| Nível         | Descrição                                                              | Link                                                                                                      |
-|---------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Básico        | Ideal para iniciantes que desejam aprender os fundamentos dos loops for | [Nível Básico](https://mega.nz/file/EH1CzSLD#KaThOiB5DsSRpmE2kBG9ZpY9l3q0hrV5fv5rYPN_J9A)               |
-| Intermediário | Para aqueles que já têm alguma experiência com loops for               | [Nível Intermediário](https://mega.nz/file/UaVmyCib#c5rqbHuyYOCnzFt3Z3f6MQkpcSCLBaivHB_vCSNsUck)     |
-| Avançado      | Para programadores experientes que desejam dominar técnicas avançadas de utilização de loops for          | [Nível Avançado](https://mega.nz/file/RaEjGZqS#hIFI1AmnZV7fx3KPANAP4ItCsT3rWmWas9eM8CVul6c)             |
+## Conteúdo de aprendizagem 
+ Durante o jogo, você terá a oportunidade de aplicar e praticar o uso do `loop for` através de exercícios integrados. Aprenda os conceitos fundamentais enquanto avança na história e enfrenta desafios que exigem o uso do loop for.
+
+
+| Nível         | Descrição                                                                                                                         | Link                                                                                                      |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| Básico        | Introdução aos conceitos fundamentais das estruturas de repetição. Os alunos aprendem a contar de 1 a 4 e entendem os três passos principais do loop for.  | [![Acesse](https://img.shields.io/badge/Acesse-ADD8E6?style=for-the-badge&labelColor=000000&logoWidth=25)](https://mega.nz/file/EH1CzSLD#KaThOiB5DsSRpmE2kBG9ZpY9l3q0hrV5fv5rYPN_J9A)               |
+| Intermediário | Exploração dos componentes essenciais do loop for, incluindo inicialização, condição de continuação e incremento/decremento. Os alunos aplicam esses conceitos em exemplos práticos em Java. | [![Acesse](https://img.shields.io/badge/Acesse-ADD8E6?style=for-the-badge&labelColor=000000&logoWidth=25)](https://mega.nz/file/UaVmyCib#c5rqbHuyYOCnzFt3Z3f6MQkpcSCLBaivHB_vCSNsUck)     |
+| Avançado      | Análise detalhada de um exemplo de loop for em Java. Os alunos examinam cada iteração do loop, compreendendo a lógica por trás da execução e da atualização da variável de controle. | [![Acesse](https://img.shields.io/badge/Acesse-ADD8E6?style=for-the-badge&labelColor=000000&logoWidth=25)](https://mega.nz/file/RaEjGZqS#hIFI1AmnZV7fx3KPANAP4ItCsT3rWmWas9eM8CVul6c)             |
 
 
 ## Características
