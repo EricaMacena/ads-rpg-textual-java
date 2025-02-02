@@ -1,11 +1,26 @@
-# 🎲 Projeto de RPG Textual em Java 🎭
+<h1 align="center">
+  <br />
+  <img
+    img src="imagens/terraExilada.png"
+    alt="Terra Exilada"
+    width="280"
+  />
+  <br />
+  <b>Terra Exilada</b>
+  <br />
+  <sub
+    ><sup><b>🎲 RPG Textual 🗡️</b></sup></sub
+  >
+  <br />
+</h1>
+
 Este é um projeto de RPG textual desenvolvido em Java, onde os jogadores assumem o papel de um personagem imerso em um mundo distópico chamado "Terra Exilada". 
 Neste mundo, uma guerra devastadora deixou metade do planeta em ruínas, e os sobreviventes encontraram refúgio em um local isolado, onde são oprimidos por um 
 governo autoritário que mantém todos aprisionados com um portão fechado.
 
 
-## 🏰 Sobre o Jogo 🗡️
-![Terra Exilada](https://img.shields.io/badge/Terra%20Exilada-ADD8E6?style=for-the-badge&labelColor=000000)
+## Sobre o Jogo 
+![Suspense](https://img.shields.io/badge/Suspense%20-ADD8E6?style=for-the-badge&labelColor=000000)
 ![Aventura](https://img.shields.io/badge/Aventura-90EE90?style=for-the-badge&labelColor=1877F2)
 ![Ficção Científica](https://img.shields.io/badge/Fic%C3%A7%C3%A3o%20Cient%C3%ADfica-FFFACD?style=for-the-badge&labelColor=000000)
 ![Java](https://img.shields.io/badge/Java-90EE90?style=for-the-badge&labelColor=1877F2)
@@ -43,7 +58,7 @@ escolhas morais e desafios emocionantes. Os jogadores podem encontrar aliados, e
 - **💬 Sistema de Diálogo Interativo:** Os jogadores podem interagir com NPCs (Personagens Não Jogáveis) através de um sistema de diálogo interativo, onde suas escolhas influenciam as respostas e ações dos personagens.
 
 
-## 🎮 Como Jogar 
+## Como Jogar 
 Para embarcar em Terra Exilada, siga estes passos simples:
 
 1. **Clonar ou Baixar o Repositório:** Comece clonando ou baixando este repositório para o seu ambiente de desenvolvimento.
