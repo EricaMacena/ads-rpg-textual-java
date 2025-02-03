@@ -19,6 +19,7 @@ Neste mundo, uma guerra devastadora deixou metade do planeta em ruínas, e os so
 governo autoritário que mantém todos aprisionados com um portão fechado.
 
 
+
 ##  **Sobre o Jogo** 
 
 | **Aspecto** | **Descrição** |
@@ -31,6 +32,8 @@ governo autoritário que mantém todos aprisionados com um portão fechado.
 | **Nível de Dificuldade** | Aumenta conforme avança no jogo, com novos desafios de programação e escolhas significativas | 
 
 ---
+
+
 
 
 
@@ -50,11 +53,9 @@ governo autoritário que mantém todos aprisionados com um portão fechado.
 
 ### 🎮 **Gameplay**
 
-Aventure-se e seja o herói desta história de ficção científica! Está pronto para tomar as decisões que irão definir o futuro deste mundo devastado? 
+Aventure-se e seja o herói desta história de ficção científica! Está pronto para tomar as decisões que irão definir o futuro deste mundo devastado ? 
 
-![Gameplay Terra Exilada](link-do-gif)
-
----
+![Gameplay Terra Exilada](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWNrd20wM2hha3FrdzBlamtkODRlb3R1NjU3Z2ZoeHZoZnp6NW5zMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tDfClZn3KzGpSL2PXk/giphy.gif)
 
 
 
