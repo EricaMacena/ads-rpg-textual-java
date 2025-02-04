@@ -19,40 +19,37 @@ import java.util.Scanner;
 public class TerraExiladaPI {
 
     //---------> Material em PDF Loop For
-    public static void conteudoBasico(){
+    public static void conteudoBasico() {
         try {
-            Desktop.getDesktop().browse(new URI("https://mega.nz/file/EH1CzSLD#KaThOiB5DsSRpmE2kBG9ZpY9l3q0hrV5fv5rYPN_J9A"));
+            Desktop.getDesktop().browse(new URI(Urls.CONTEUDO_BASICO.getUrl()));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-    
-    
-    public static void conteudoIntermediario(){
-          try {
-            Desktop.getDesktop().browse(new URI("https://mega.nz/file/UaVmyCib#c5rqbHuyYOCnzFt3Z3f6MQkpcSCLBaivHB_vCSNsUck"));
+
+
+    public static void conteudoIntermediario() {
+        try {
+            Desktop.getDesktop().browse(new URI(Urls.CONTEUDO_INTERMEDIARIO.getUrl()));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-    
-    
-    public static void conteudoAvançado(){
-           try {
-            Desktop.getDesktop().browse(new URI("https://mega.nz/file/RaEjGZqS#hIFI1AmnZV7fx3KPANAP4ItCsT3rWmWas9eM8CVul6c"));
+
+
+    public static void conteudoAvançado() {
+        try {
+            Desktop.getDesktop().browse(new URI(Urls.CONTEUDO_AVANCADO.getUrl()));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-    
-    
+
+
     //Material sobre operadores relacionais 
-    public static void operadoresRelacionais(){
-                   try {
-            Desktop.getDesktop().browse(new URI("https://mega.nz/file/5PsF2BiJ#1pFVl29X-nlzUXda2ZSfaANXm1pfPvTnMh06LaqyzMI"));
+    public static void operadoresRelacionais() {
+        try {
+            Desktop.getDesktop().browse(new URI(Urls.OPERADORES_RELACIONAIS.getUrl()));
         } catch (Exception e) {
             e.printStackTrace();
         }
