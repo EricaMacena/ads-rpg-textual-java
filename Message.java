@@ -188,6 +188,17 @@ public enum Message {
             O governador rebate, dizendo que ela deveria apoia-lo por ser mulher dele.
             Nesse momento, você é surpreendido(a) quando a esposa do governador revela
             que está tendo um caso com o %s."""),
+    CINQUENTA_E_UM("%s: %s ajude ele enquanto mantenho o governador amarrado aqui..."),
+    CINQUENTA_E_DOIS("""
+            %s, acompanha você até o computador do governador, explicando a gravidade
+            da situação. Ela revela que o sistema de segurança é extremamente sensível e
+            permite apenas quatro tentativas de senha antes de acionar o alarme."""),
+    CINQUENTA_E_TRES("""
+            Com cada tentativa mal sucedida, o risco de ser descoberto aumenta.
+            %s destaca que, no quinto erro, os seguranças de outros prédios
+            serão alertados e invadirão imediatamente o local."""),
+    CINQUENTA_E_QUATRO("%s: %s, essa é a senha para logar."),
+    CINQUENTA_E_CINCO("Diante do computador, você se prepara mentalmente para enfrentar o desafio que se apresenta."),
     ;
 
     private String text;
