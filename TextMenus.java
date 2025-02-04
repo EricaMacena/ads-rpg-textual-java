@@ -19,4 +19,9 @@ public enum TextMenus {
     TextMenus(String menu) {
         this.menu = menu;
     }
+
+    @Override
+    public String toString() {
+        return this.menu;
+    }
 }
