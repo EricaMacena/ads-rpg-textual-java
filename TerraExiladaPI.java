@@ -74,17 +74,16 @@ public class TerraExiladaPI {
    
     public static void continuarEnredo(){
         Scanner ler = new Scanner(System.in);
-        System.out.println("\n\nDIGITE 1 PARA CONTINUAR: ");
-         int continuar = ler.nextInt();
-         
-         while(continuar != 1){
-         System.out.printf("Digite 1 para continuar: ");
-         continuar = ler.nextInt();
-       }
-     
-         if(continuar == 1){
-         System.out.println("\n"); 
-       }
+        int continuar = 0;
+        System.out.println();
+        while (continuar != 1) {
+            System.out.print("\nDIGITE 1 PARA CONTINUAR: ");
+            try {
+                continuar = Integer.parseInt(ler.nextLine());
+            } catch (NumberFormatException ignored) {
+                System.out.println("Informe um valor relevante.");
+            }
+        }
     }
     
     
