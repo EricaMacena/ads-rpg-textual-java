@@ -17,6 +17,7 @@ import java.util.Scanner;
  * @author Erica
  */
 public class TerraExiladaPI {
+    private static final Scanner ler = new Scanner(System.in);
 
     //---------> Material em PDF Loop For
     public static void conteudoBasico() {
@@ -47,14 +48,10 @@ public class TerraExiladaPI {
 
     //Continua pedindo uma alternativa válida
     public static String validarAlternativa(List<String> options) {
-        Scanner scanner = new Scanner(System.in);
-     while (!resposta.equalsIgnoreCase("A") && !resposta.equalsIgnoreCase("B") && !resposta.equalsIgnoreCase("C") && !resposta.equalsIgnoreCase("D")) {
-            System.out.print("\nDigite (a, b, c ou d): ");
-            resposta = scanner.nextLine();
         String resposta = "";
         while (!options.contains(resposta)) {
             System.out.printf("Digite %s: ", String.join(", ", options.subList(0, options.size() / 2)));
-            resposta = scanner.nextLine().trim().toLowerCase();
+            resposta = ler.nextLine().trim().toLowerCase();
         }
         return resposta;
     }
@@ -79,6 +76,9 @@ public class TerraExiladaPI {
      public static void Desafio1() {    
     Scanner scanner = new Scanner(System.in);
 
+
+    //1° Desafio sobre conteúdo básico do 'For'
+    public static void Desafio1() {
         //Alternativas
         String[] alternativas = {
                 "Comparar dois valores",
@@ -99,16 +99,16 @@ public class TerraExiladaPI {
             "b) " + alternativas[1] + "\n" +
             "c) " + alternativas[2] + "\n" +
             "d) " + alternativas[3] + "\n");
+        //Exibe as alternativas
 
     int tentativas = 0;
     int erros = 0;
+        int tentativas = 0;
+        int erros = 0;
 
-    while (tentativas < 3) {
-        String resposta = scanner.nextLine();
-       
-        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-         validarAlternativa(resposta);
-     
+        while (tentativas < 3) {
+            //Enquanto a resposta não for uma alternativa válida, continua pedindo.
+            String resposta = validarAlternativa(options);
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
@@ -129,20 +129,15 @@ public class TerraExiladaPI {
         }
     }
 
-    if (tentativas >= 3) {
-        System.out.println("-----> Você esgotou suas tentativas. \nA resposta correta é: Repetir uma sequência de comandos por um número determinado de vezes.");
-    }
+        if (tentativas >= 3) {
+            System.out.println("-----> Você esgotou suas tentativas. \nA resposta correta é: Repetir uma sequência de comandos por um número determinado de vezes.");
+        }
 
     }
 
     //2° Desafio sobre conteúdo básico do 'For'
     public static void Desafio2() {
-        Scanner scanner = new Scanner(System.in);
-
-    // Alternativas
-    String[] alternativas = {"for(inicialização; atualização; incrementar ou decrementar)", "for(condição de continuação; inicialização; incrementar ou decrementar)",
-            "for(inicialização; condição de continuação; incrementar ou decrementar)", "for(inicialização; incrementar ou decrementar; condição de continuação)"};
-        // Alternativas
+        //Alternativas
         String[] alternativas = {
                 "for(inicialização; atualização; incrementar ou decrementar)",
                 "for(condição de continuação; inicialização; incrementar ou decrementar)",
@@ -162,15 +157,14 @@ public class TerraExiladaPI {
             "b) " + alternativas[1] + "\n" +
             "c) " + alternativas[2] + "\n" +
             "d) " + alternativas[3] + "\n");
+        //Exibe as alternativas
 
-    int tentativas = 0;
-    int erros = 0;
+        int tentativas = 0;
+        int erros = 0;
 
-    while (tentativas < 3) {
-        String resposta = scanner.nextLine();
-
-       // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-         validarAlternativa(resposta);
+        while (tentativas < 3) {
+            //Enquanto a resposta não for uma alternativa válida, continua pedindo.
+            String resposta = validarAlternativa(options);
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
@@ -199,18 +193,19 @@ public class TerraExiladaPI {
         
     }
 
-}
-    
-    
-    
-      
-      // 3° Desafio sobre o ConteúdoIntermediaro do For 
-     public static void Desafio3() {
-     Scanner scanner = new Scanner(System.in);
+    }
 
-     // Array com as alternativas
-     String[] alternativas = {"Determinar o valor inicial da variável de controle do loop", "Verificar se o loop deve continuar executando",
-            "Atualizar o valor da variável de controle do loop em cada iteração", "Definir a ação a ser realizada em cada iteração do loop"};
+    //3º Desafio sobre o conteúdo intermediário do 'For'
+    public static void Desafio3() {
+        //Array com as alternativas
+        String[] alternativas = {
+                "Determinar o valor inicial da variável de controle do loop",
+                "Verificar se o loop deve continuar executando",
+                "Atualizar o valor da variável de controle do loop em cada iteração",
+                "Definir a ação a ser realizada em cada iteração do loop"
+        };
+
+        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
@@ -231,6 +226,7 @@ public class TerraExiladaPI {
 
        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
          validarAlternativa(resposta);
+            //Enquanto a resposta não for uma alternativa válida, continua pedindo.
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
@@ -271,6 +267,9 @@ public class TerraExiladaPI {
        public static void Desafio4() {
      Scanner scanner = new Scanner(System.in);
 
+    }
+
+    //4º Teste sobre o conteúdo avançado do 'For'
         //Array com as alternativas
         String[] alternativas = {
                 "for (int i = 0; i <= 10; i++)",
@@ -291,15 +290,17 @@ public class TerraExiladaPI {
             "b) " + alternativas[1] + "\n" +
             "c) " + alternativas[2] + "\n" +
             "d) " + alternativas[3] + "\n");
+        //Exibe as alternativas
 
-     int tentativas = 0;
-     int erros = 0;
+        int tentativas = 0;
+        int erros = 0;
 
      while (tentativas < 3) {
         String resposta = scanner.nextLine();
 
         // Enquanto a resposta não for uma alternativa válida, continua pedindo.
         validarAlternativa(resposta);
+            //Enquanto a resposta não for uma alternativa válida, continua pedindo.
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
@@ -327,8 +328,6 @@ public class TerraExiladaPI {
     }
 
     public static void DesafioFinalA1() {
-        Scanner scanner = new Scanner(System.in);
-
         List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
         int tentativas = 0;
@@ -437,8 +436,6 @@ public class TerraExiladaPI {
     }
 
     public static void DesafioFinalA2(int tentativas) {
-        Scanner scanner = new Scanner(System.in);
-
         List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
         System.out.println("\nQual for gera a senha para abrir o portão ? ");
@@ -449,7 +446,7 @@ public class TerraExiladaPI {
                 d)for (int i = 13; i = 35; i = i + 6)
                 """);
 
-        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
+        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta1 = validarAlternativa(options);
 
         if (resposta1.equalsIgnoreCase("a")) {
@@ -487,6 +484,7 @@ public class TerraExiladaPI {
       }
          
              if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
+                //Enquanto a resposta não for uma alternativa válida, continua pedindo.
             System.out.println("\n----------> SENHA CORRETA");
             System.out.println("----------> ABRINDO PORTÃO");
             ConclusaoFinal1();
@@ -495,17 +493,13 @@ public class TerraExiladaPI {
              System.out.println("SISTEMA DE SEGURANÇA ATIVADO"); 
              ConclusaoFinal2();
         }
-       
-        
-        
-        }
-            
-        
-        
-    
-        // Desafio final 2 parte 1
-        public static void DesafioFinalB1(){
-         Scanner scanner = new Scanner(System.in);
+
+    }
+
+    //Desafio final 2 parte 1
+    public static void DesafioFinalB1() {
+        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
+
         int tentativas = 0;
 
         System.out.println("\n\nLOGIN: GOVERNO");
@@ -587,6 +581,7 @@ public class TerraExiladaPI {
       }
         
          
+        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         if (resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
              System.out.println("----> Você atingiu o limite máximo de erros:" +tentativas);
              System.out.println("\n\nLOGIN: GOVERNO");
@@ -613,18 +608,8 @@ public class TerraExiladaPI {
         }
 
     }
-        
-        
-        
-    
-    
-   
-    
-    public static void DesafioFinalB2(int tentativas){
 
     public static void DesafioFinalB2(int tentativas) {
-        Scanner scanner = new Scanner(System.in);
-
         List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
         System.out.println("\nQual for gera a senha para abrir o portão ? ");
@@ -634,14 +619,11 @@ public class TerraExiladaPI {
                 c)for (int i = 29; i > 47;  i = i + 10)
                 d)for (int i = 29; i = 47; i = i + 6)
                 """);
-        String resposta1 = scanner.nextLine();
 
+        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
+        String resposta1 = validarAlternativa(options);
 
-        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        validarAlternativa(resposta1);
-        
-        
-         if (resposta1.equalsIgnoreCase("a")) {
+        if (resposta1.equalsIgnoreCase("a")) {
             System.out.println("\n----------> SENHA CORRETA");
             System.out.println("----------> ABRINDO PORTÃO");
             ConclusaoFinal1(); 
@@ -683,7 +665,7 @@ public class TerraExiladaPI {
                         d)for (int i = 29; i = 47; i = i + 6)
                         """);
 
-                // Enquanto a resposta não for uma alternativa válida, continua pedindo.
+                //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta1 = validarAlternativa(options);
 
                 if (resposta1.equalsIgnoreCase("a")) {
@@ -778,6 +760,7 @@ public class TerraExiladaPI {
                  + "\nOs rebeldes continuarão em busca da liberdade e vingança.");
          
          System.out.println("\n\n-----> FIM <-----");
+    public static void ConclusaoFinal2() {
         System.out.println("""
 
                 Após a ativação do alarme e a invasão dos guardas,\s
@@ -807,8 +790,7 @@ public class TerraExiladaPI {
         System.out.println("\n\n-----> FIM <-----");
     }
 
-    private static int obterOpcao(Scanner ler, String mensagem, String mensagemErro, int minIncluso, int maxIncluso) {
-        if (ler == null) throw new IllegalArgumentException("Objeto do tipo Scanner não pode ser nulo.");
+    private static int obterOpcao(String mensagem, String mensagemErro, int minIncluso, int maxIncluso) {
         if (mensagemErro == null || mensagemErro.trim().isEmpty()) mensagemErro = "Valor informado Inválido!";
         if (maxIncluso < minIncluso) {
             int auxiliar = maxIncluso;
@@ -836,7 +818,6 @@ public class TerraExiladaPI {
     }
 
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
         System.out.println(Message.UM);
         System.out.println("\n" + Message.DOIS);
         System.out.println("\n" + Message.TRES);
@@ -898,7 +879,7 @@ public class TerraExiladaPI {
         System.out.printf("\n" + Message.TRINTA_E_DOIS + "\n", "Debug");
         System.out.println("\n" + TextMenus.UM);
 
-        int opcao = obterOpcao(ler, "Digite 1 ou 2: ", "Valor informado incorreto!\n", 1, 2);
+        int opcao = obterOpcao("Digite 1 ou 2: ", "Valor informado incorreto!\n", 1, 2);
 
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.TRINTA_E_TRES + "\n", nome);
@@ -911,56 +892,56 @@ public class TerraExiladaPI {
         System.out.println("\n" + Message.TRINTA_E_SETE + "\n");
 
         //Acessar material
-        obterOpcao(ler, Message.TRINTA_E_NOVE.toString().formatted(1, 1), "Informe apenas 1 para ler o material", 1, 1);
+        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 1), "Informe apenas 1 para ler o material", 1, 1);
 
         conteudoBasico();
 
         //Fazer o 1° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 1, 1, "SIM");
 
-        obterOpcao(ler, "Digite 1 para fazer o 1° teste: ", "Informe apenas 1 para acessar o 1º teste", 1, 1);
+        obterOpcao("Digite 1 para fazer o 1° teste: ", "Informe apenas 1 para acessar o 1º teste", 1, 1);
 
         Desafio1();
 
         //Fazer o 2° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 2, 1, "SIM");
 
-        obterOpcao(ler, "Digite 1 para fazer o 2° teste: ", "Informe apenas 1 para acessar o 2º teste", 1, 1);
+        obterOpcao("Digite 1 para fazer o 2° teste: ", "Informe apenas 1 para acessar o 2º teste", 1, 1);
 
         Desafio2();
 
         System.out.printf("\n\n" + Message.TRINTA_E_OITO + "\n", "Debug", 1);
 
         //Ler o conteúdo intermediário sobre 'For'
-        obterOpcao(ler, Message.TRINTA_E_NOVE.toString().formatted(1, 2), "Informe apenas 1 para ler o 2º material", 1, 1);
+        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 2), "Informe apenas 1 para ler o 2º material", 1, 1);
 
         conteudoIntermediario();
 
         //Fazer o 3° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
 
-        obterOpcao(ler, "Digite 1 para fazer o 3° teste: ", "Informe apenas 1 para acessar o 3º teste", 1, 1);
+        obterOpcao("Digite 1 para fazer o 3° teste: ", "Informe apenas 1 para acessar o 3º teste", 1, 1);
 
         Desafio3();
 
         System.out.printf("\n\n" + Message.QUARENTA + "\n", "Debug");
 
         //Ler o conteúdo avançado sobre 'For'
-        obterOpcao(ler, Message.TRINTA_E_NOVE.toString().formatted(1, 3), "Informe apenas 1 para acessar o 3º teste", 1, 1);
+        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 3), "Informe apenas 1 para acessar o 3º teste", 1, 1);
 
         conteudoAvancado();
 
         //Fazer o 4° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 4, 1, "SIM");
 
-        obterOpcao(ler, Message.QUARENTA_E_UM.toString().formatted(1, 4), "Informe apenas 1 para acessar o 4º teste", 1, 1);
+        obterOpcao(Message.QUARENTA_E_UM.toString().formatted(1, 4), "Informe apenas 1 para acessar o 4º teste", 1, 1);
 
         Desafio4();
 
         System.out.printf("\n" + Message.QUARENTA_E_DOIS + "\n", "Debug");
         System.out.printf(TextMenus.TRES + "\n", 1, 2, 1, 1, 2, 2);
 
-        opcao = obterOpcao(ler, "Digite 1 ou 2: ", "Digite apenas 1 ou 2!\n", 1, 2);
+        opcao = obterOpcao("Digite 1 ou 2: ", "Digite apenas 1 ou 2!\n", 1, 2);
 
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.QUARENTA_E_TRES + "\n", 1, nome);
