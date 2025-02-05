@@ -346,71 +346,72 @@ public class TerraExiladaPI {
 
         // Enquanto a resposta não for uma alternativa válida, continua pedindo.
         validarAlternativa(resposta);
-        
-        
-        if(resposta.equalsIgnoreCase("b")){
-                   System.out.println("\n\nLOGIN: GOVERNO");
-             System.out.println("SENHA: 2 4 6 8");
-             System.out.println("LOGANDO ......\n"); 
-             System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                     +"\narquivos e começa a vasculhar para encontrar informações que possam"
-                     + "\najudar abrir o portão.");
-             System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                     +"\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                     + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                     + "\nde segurança do governo.");
-             System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                     + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                     + "\npara abrir o portão."
-                     + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                     + "\ncomo uma chave para a liberdade. "
-                     + "\nA senha é: 13, 24 e 31.");
-                   DesafioFinalA2(tentativas);
-         }else{
-            tentativas = tentativas+1;
-             System.out.println("----> Tentativa " + tentativas);
-             System.out.println("----> Acesso Negado");
-        while (tentativas < 5) {
-            System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
-            System.out.printf("a)for (int i = 0; i <= 8; i = i + 1)\n" +
-            "b)for (int i = 2; i <= 8; i = i + 2)\n" +
-            "c)for (int i = 2; i < 8;  i = i + 2)\n" +
-            "d)for (int i = 2; i <= 8; i = i + 1)\n");
-            resposta = scanner.nextLine();
-          
-              
-         // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-         validarAlternativa(resposta);
-            
-            if (resposta.equalsIgnoreCase("b")) {
-                     System.out.println("\n\nLOGIN: GOVERNO");
-             System.out.println("SENHA: 2 4 6 8");
-             System.out.println("LOGANDO ......\n"); 
-             System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                     +"\narquivos e começa a vasculhar para encontrar informações que possam"
-                     + "\najudar abrir o portão.");
-             System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                     +"\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                     + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                     + "\nde segurança do governo.");
-             System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                     + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                     + "\npara abrir o portão."
-                     + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                     + "\ncomo uma chave para a liberdade. "
-                     + "\nA senha é: 13, 24 e 31.");
-             DesafioFinalA2(tentativas);
-                break;
-            } else {
-               tentativas = tentativas+1;
-               System.out.println("----> Tentativa " + tentativas);
-               System.out.println("----> Acesso Negado");
-            }
-         }
-      }
-        
-         
+
+
+        if (resposta.equalsIgnoreCase("b")) {
+            System.out.println("\n\nLOGIN: GOVERNO");
+            System.out.println("SENHA: 2 4 6 8");
+            System.out.println("LOGANDO ......\n");
+            System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
+                    + "\narquivos e começa a vasculhar para encontrar informações que possam"
+                    + "\najudar abrir o portão.");
+            System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
+                    + "\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
+                    + "\ndescobriu que se trata de um documento com informações sobre o sistema"
+                    + "\nde segurança do governo.");
+            System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
+                    + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
+                    + "\npara abrir o portão."
+                    + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
+                    + "\ncomo uma chave para a liberdade. "
+                    + "\nA senha é: 13, 24 e 31.");
+            DesafioFinalA2(tentativas);
+        } else {
+            tentativas = tentativas + 1;
+            System.out.println("----> Tentativa " + tentativas);
+            System.out.println("----> Acesso Negado");
+            while (tentativas < 5) {
+                System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
+                System.out.print("""
+                        a)for (int i = 0; i <= 8; i = i + 1)
+                        b)for (int i = 2; i <= 8; i = i + 2)
+                        c)for (int i = 2; i < 8;  i = i + 2)
+                        d)for (int i = 2; i <= 8; i = i + 1)
                         """);
+                resposta = scanner.nextLine();
+
+
+                // Enquanto a resposta não for uma alternativa válida, continua pedindo.
+                validarAlternativa(resposta);
+
+                if (resposta.equalsIgnoreCase("b")) {
+                    System.out.println("\n\nLOGIN: GOVERNO");
+                    System.out.println("SENHA: 2 4 6 8");
+                    System.out.println("LOGANDO ......\n");
+                    System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
+                            + "\narquivos e começa a vasculhar para encontrar informações que possam"
+                            + "\najudar abrir o portão.");
+                    System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
+                            + "\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
+                            + "\ndescobriu que se trata de um documento com informações sobre o sistema"
+                            + "\nde segurança do governo.");
+                    System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
+                            + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
+                            + "\npara abrir o portão."
+                            + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
+                            + "\ncomo uma chave para a liberdade. "
+                            + "\nA senha é: 13, 24 e 31.");
+                    DesafioFinalA2(tentativas);
+                    break;
+                } else {
+                    tentativas = tentativas + 1;
+                    System.out.println("----> Tentativa " + tentativas);
+                    System.out.println("----> Acesso Negado");
+                }
+            }
+        }
+
+
         if (resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
             System.out.println("----> Você atingiu o limite máximo de erros:" +tentativas);
                System.out.println("\n\nLOGIN: GOVERNO");
@@ -443,13 +444,15 @@ public class TerraExiladaPI {
         public static void DesafioFinalA2(int tentativas){
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nQual for gera a senha para abrir o portão ? ");
-        System.out.printf("a)for (int i = 13; i <= 35; i = i + 11)\n" +
-            "b)for (int i = 13; i < 35; i = i + 9)\n" +
-            "c)for (int i = 13; i > 35;  i = i + 15)\n" +
-            "d)for (int i = 13; i = 35; i = i + 6)\n");
-              String resposta1 = scanner.nextLine();
-              
-       
+        System.out.print("""
+                a)for (int i = 13; i <= 35; i = i + 11)
+                b)for (int i = 13; i < 35; i = i + 9)
+                c)for (int i = 13; i > 35;  i = i + 15)
+                d)for (int i = 13; i = 35; i = i + 6)
+                """);
+        String resposta1 = scanner.nextLine();
+
+
         // Enquanto a resposta não for uma alternativa válida, continua pedindo.
         validarAlternativa(resposta1);
         
@@ -514,15 +517,16 @@ public class TerraExiladaPI {
         System.out.println("SENHA: _ _ _ _");
         
         System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
-        System.out.printf("a)for (int i = 0; i <= 8; i = i + 1)\n" +
-            "b)for (int i = 2; i <= 8; i = i + 2)\n" +
-            "c)for (int i = 2; i < 8;  i = i + 2)\n" +
-            "d)for (int i = 2; i <= 8; i = i + 1)\n");
-             String resposta = scanner.nextLine();
-        
-        
-        
-       // Enquanto a resposta não for uma alternativa válida, continua pedindo.
+        System.out.print("""
+                a)for (int i = 0; i <= 8; i = i + 1)
+                b)for (int i = 2; i <= 8; i = i + 2)
+                c)for (int i = 2; i < 8;  i = i + 2)
+                d)for (int i = 2; i <= 8; i = i + 1)
+                """);
+        String resposta = scanner.nextLine();
+
+
+        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
         validarAlternativa(resposta);
         
         
@@ -624,13 +628,15 @@ public class TerraExiladaPI {
     public static void DesafioFinalB2(int tentativas){
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nQual for gera a senha para abrir o portão ? ");
-        System.out.printf("a)for (int i = 29; i <= 47; i = i + 9)\n" +
-            "b)for (int i = 29; i < 47; i = i + 9)\n" +
-            "c)for (int i = 29; i > 47;  i = i + 10)\n" +
-            "d)for (int i = 29; i = 47; i = i + 6)\n"); 
-              String resposta1 = scanner.nextLine();
-              
-       
+        System.out.print("""
+                a)for (int i = 29; i <= 47; i = i + 9)
+                b)for (int i = 29; i < 47; i = i + 9)
+                c)for (int i = 29; i > 47;  i = i + 10)
+                d)for (int i = 29; i = 47; i = i + 6)
+                """);
+        String resposta1 = scanner.nextLine();
+
+
         // Enquanto a resposta não for uma alternativa válida, continua pedindo.
         validarAlternativa(resposta1);
         
@@ -670,6 +676,33 @@ public class TerraExiladaPI {
       }
          
              if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
+                System.out.print("""
+                        a)for (int i = 29; i <= 47; i = i + 9)
+                        b)for (int i = 29; i < 47; i = i + 9)
+                        c)for (int i = 29; i > 47;  i = i + 10)
+                        d)for (int i = 29; i = 47; i = i + 6)
+                        """);
+                resposta1 = scanner.nextLine();
+
+                // Enquanto a resposta não for uma alternativa válida, continua pedindo.
+                validarAlternativa(resposta1);
+
+                if (resposta1.equalsIgnoreCase("a")) {
+                    System.out.println("\n----------> SENHA CORRETA");
+                    System.out.println("----------> ABRINDO PORTÃO");
+                    ConclusaoFinal1();
+                    break;
+                } else {
+                    tentativas = tentativas + 1;
+                    System.out.println("----> Tentativa " + tentativas);
+                    System.out.println("----> Acesso Negado");
+                }
+
+            }
+
+        }
+
+        if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
             System.out.println("\n----------> SENHA CORRETA");
             System.out.println("----------> ABRINDO PORTÃO");
             ConclusaoFinal1();
@@ -702,8 +735,23 @@ public class TerraExiladaPI {
                 + "\ncontar um com o outro nas adversidades que ainda estão por vir."
                 + "\nJuntos, vocês caminham em direção a um novo horizonte.");
         
+        System.out.println("""
+
+                Enquanto vocês observam os rebeldes desaparecendo no horizonte,
+                seguindo seus caminhos individuais em busca de liberdade, você se
+                sente profundamente satisfeito por ter desempenhado um papel importante
+                na transformação de suas vidas.""");
+
+        System.out.println("""
+
+                Enquanto se afastam do local, rumo a um futuro incerto, vocês olham
+                para trás e sorriem, agradecendo a força da parceria que os levou até ali.
+                Uma amizade forte e duradoura foi formada, e vocês sabem que sempre poderão
+                contar um com o outro nas adversidades que ainda estão por vir.
+                Juntos, vocês caminham em direção a um novo horizonte.""");
+
         System.out.println("\n\n-----> FIM <-----");
-        
+
     }
     
     
@@ -731,6 +779,33 @@ public class TerraExiladaPI {
                  + "\nOs rebeldes continuarão em busca da liberdade e vingança.");
          
          System.out.println("\n\n-----> FIM <-----");
+        System.out.println("""
+
+                Após a ativação do alarme e a invasão dos guardas,\s
+                a situação se torna caótica.
+                Tiros por todo local, crianças choram e você sente o peso
+                da responsabilidade e da falha.
+                Em meio ao tumulto, você e Debug se veem encurralados,
+                buscando uma saída para a situação desesperadora.""");
+
+        System.out.println("""
+
+                Durante a tentativa de fuga em meio ao caos
+                Debug e você acaba sendo capturados pelos guardas.""");
+
+        System.out.println("""
+
+                Governador: Não quero eles vivos e quanto a\s
+                Cibelle, coloque-a em cativeiro.""");
+
+
+        System.out.println("""
+                Embora a história tenha tomado um rumo sombrio
+                e triste, a coragem e determinação que você e Debug
+                demonstraram ao longo da jornada não serão esquecidas.
+                Os rebeldes continuarão em busca da liberdade e vingança.""");
+
+        System.out.println("\n\n-----> FIM <-----");
     }
      
       
@@ -804,332 +879,194 @@ public class TerraExiladaPI {
      
           continuarEnredo();
 
-         System.out.println("\n\nDebug: Quem é você e por que está me seguindo?");
+        System.out.println("\n\nDebug: " + Message.SETE);
+        System.out.printf("\n" + nome + ": " + Message.OITO + "\n", nome);
+        System.out.printf("\n" + Message.NOVE + "\n", "Debug", nome);
+        System.out.printf("\n" + Message.DEZ + "\n", nome);
 
-         System.out.println("\n" + nome + ": Desculpe, não foi minha intenção assustá-lo."
-                          + "\nEu ouvi falar sobre você e seu trabalho com programação,"
-                          + "\ne estou interessado(a) em ajudar a sua causa."
-                          + "\nMe chamo " + nome);
+        continuarEnredo();
 
-         System.out.println("\nDebug: Hum... não é todo dia que alguém me segue até"
-                          + "\num beco escuro às dez da noite " + nome +"."
-                          + "\nMas tudo bem, vou dar o benefício da dúvida."
-                          + "\nComo você pode ajudar ?");
+        System.out.printf("\n\n" + Message.ONZE + "\n", "Debug");
+        System.out.printf("\n" + Message.DOZE + "\n", nome);
+        System.out.printf("\n" + Message.TREZE + "\n", "Debug");
 
-         System.out.println("\n" + nome + ": Bem, eu não sou experiente, mas estou"
-                          + "\ninteressado(a) nem aprender e contribuir com o que"
-                          + "\nfor necessário. "
-                          + "\nTenho algumas noções básicas de Java e acredito que"
-                          + "\nposso ser útil para abrir o portão, se for ensinado.");
-     
-         
-         
-         continuarEnredo();
-     
+        continuarEnredo();
 
-         System.out.println("\n\nDebug: Ah, entendi. Bom, nós precisamos de pessoas"
-                 + "\ncom vontade de aprender e ajudar. Mas não podemos nos arriscar"
-                 + "\ncom desconhecidos, se você quiser se juntar a nós,"
-                 + "\nterá que provar.");
+        System.out.println("\n\n" + Message.QUATORZE);
+        System.out.printf("\n" + Message.QUINZE + "\n", "Debug");
+        System.out.println("\n" + Message.DEZESSEIS);
 
-         System.out.println("\n" + nome + ": O que devo fazer?");
-     
-     
-         System.out.println("\nDebug: Eu quero que você prove que está do nosso lado."
-                          + "\nTire o chip que o governo implantou na sua orelha."
-                          + "\nSe você é mesmo um rebelde, não deveria estar usando"
-                          + "\nessas tecnologias de rastreamento.");
-         
-         
-         continuarEnredo();
-         
-         
+        continuarEnredo();
 
-         System.out.println("\n\nVocê sente um arrepio percorrer seu corpo, mas decide"
-                          + "\nque está disposto a provar sua lealdade."
-                          + "\nCom as mãos trêmulas, você aceita a proposta e retira"
-                          + "\no chip da sua orelha, sentindo-se vulnerável sem ele.");
+        System.out.printf("\n\n" + Message.DEZESSETE + "\n", "Debug");
+        System.out.printf("\n" + Message.DEZOITO + "\n", "Debug");
+        System.out.printf("\n" + Message.DEZENOVE + "\n", "Debug");
+        System.out.println(Message.VINTE);
 
-         System.out.println("\nDebug faz um olhar penetrante e avaliador antes de dizer:"
-                          + "\nMuito bem, você passou no teste."
-                          + "\nMas ainda não posso confiar completamente em você.");
-         
-         
-     
-         System.out.println("\nEle pega o chip da sua mão e guarda em seu bolso, e em seguida,"
-                          + "\ncomeça a caminhar em direção a um prédio abandonado nas"
-                          + "\nproximidades."
-                          + "\nVocê segue-o com hesitação, se perguntando o que vai acontecer.");
-    
-         
-         continuarEnredo();
-         
-         
-         System.out.println("\n\nVocês chegam ao prédio abandonado, Debug pega uma lanterna"
-                          + "\nde sua mochila."
-                          + "\nEle acende, em seguida aponta para um corredor escuro"
-                          + "\ne empoeirado.");
+        continuarEnredo();
 
-         System.out.println("\nDebug: Vamos entrar aqui. Há algo que eu preciso te mostrar.");
+        System.out.printf("\n\n" + Message.VINTE_E_UM + "\n", nome);
+        System.out.printf("\n" + Message.VINTE_E_DOIS + "\n", "Debug");
+        System.out.println("\n" + Message.VINTE_E_TRES);
+        System.out.printf("\n" + Message.VINTE_E_QUATRO + "\n", nome);
+        System.out.printf("\n" + Message.VINTE_E_CINCO + "\n", "Debug");
+        System.out.println("\n" + Message.VINTE_E_SEIS);
 
-         System.out.println("\nVocê segue Debug pelo corredor enquanto a luz da lanterna"
-                          + "\nilumina o caminho."
-                          + "\nO ar é úmido e o cheiro de mofo é forte."
-                          + "\nVocê começa a sentir que algo estranho está acontecendo.");
- 
-         System.out.println("De repente, você ouve um ruído. Algo parece estar se movendo"
-                          + " na escuridão.");
-         
-         
-         
-         continuarEnredo();
-         
-         
+        continuarEnredo();
 
-         System.out.println("\n\n" + nome + ":O que é isso?");
+        System.out.printf("\n\n" + Message.VINTE_E_SETE + "\n", "Debug");
+        System.out.printf("\n" + Message.VINTE_E_OITO + "\n", nome);
+        System.out.printf("\n" + Message.VINTE_E_NOVE + "\n", "Debug");
+        System.out.println("\n" + Message.TRINTA);
 
-         System.out.println("\nDebug: Não se preocupe. É só o vento.");
-     
-         System.out.println("\nVocê olha para trás e percebe que não"
-                          + "\nhá janelas naquele corredor.");
+        continuarEnredo();
 
-         System.out.println("\n" + nome + ": Como pode ser o vento?"
-                          + "\nNão há janelas aqui!");
- 
-         System.out.println("\nDebug: Eu disse não se preocupe."
-                          + "\nVamos continuar.");
+        System.out.printf("\n" + Message.TRINTA_E_UM + "\n", "Debug");
+        System.out.printf("\n" + Message.TRINTA_E_DOIS + "\n", "Debug");
+        System.out.println("\n" + TextMenus.UM);
 
-         System.out.println("Vocês caminham até uma porta no final do corredor."
-                          + "\nDebug a abre e vocês entram em uma sala escura.");
-         
-         
-         
-         continuarEnredo();
-         
+        // TODO transformar num método
+        int opcao = ler.nextInt();
 
-           
-         System.out.println("\n\nVocê fica perplexo ao ver um cômodo escuro, com apenas"
-                          + "\numa cadeira no centro do local e uma luz fraca no teto."
-                          + "\nDebug te puxa para dentro e fecha a porta atrás de si.");
-     
-     
-         System.out.println("\n" + nome + ": O que é isso? O que está acontecendo ?"
-                          + "\nvocê pergunta, sentindo seu coração acelerar.");
+        while (opcao != 1 && opcao != 2) {
+            System.out.print("Digite 1 ou 2: ");
+            opcao = ler.nextInt();
+        }
 
-         System.out.println("\nDebug coloca a mão em seu ombro, tentando te acalmar."
-                          + "\nEu preciso que você entenda que essa é uma situação séria. "
-                          + "\nO governo não pode saber. É por isso que precisamos de"
-                          + "\npessoas sigilosas, que estão dispostas a arriscar tudo"
-                          + "\npara ajudar nossa causa.");
+        //Opção 1
+        if (opcao == 1) {
+            System.out.printf("\n\n" + Message.TRINTA_E_TRES + "\n", nome);
+            System.out.printf("\n" + Message.TRINTA_E_QUATRO + "\n", "Debug");
+        }
+        //Opção 2
+        else {
+            System.out.printf("\n\n" + Message.TRINTA_E_CINCO + "\n", nome);
+        }
 
-         System.out.println("\nEle caminha até a cadeira e aponta para ela."
-                         + "\nSente-se, ele diz.");
-         
-         
-         
-         continuarEnredo();
-         
+        System.out.println("\n" + Message.TRINTA_E_SEIS);
+        System.out.println("\n" + Message.TRINTA_E_SETE + "\n");
 
-         
-         System.out.println("\nDebug começa a explicar como será o treinamento e"
-                          + "\ncomo você poderá contribuir com a causa."
-                          + "\nEle entrega uma apostila sobre loop for.");
+        //Acessar material
+        System.out.println("Digite 1 para ler o material: ");
+        // TODO transformar num método
+        opcao = ler.nextInt();
+        System.out.println("\n");
+        while (opcao != 1) {
+            System.out.print("Digite 1 para ler o material: ");
+            opcao = ler.nextInt();
+        }
 
-         System.out.println("\nDebug: Para abrir o portão, você precisa saber sobre"
-                          + "\nLoop For, o governo colocou um sistema de segurança"
-                          + "\nbaseado nisso. Então, montei um material com tudo que"
-                          + "\nvocê precisa para quebrar esse sistema.");
-     
-         System.out.println("\n-----> ESCOLHA <------");
-         System.out.println("Opção 1: Perguntar como ele sabe exatamente o que precisa.");
-         System.out.println("Opção 2: Não questionar. Pedir para continuar com a explicação.");
-         System.out.println("\nDIGITE 1 PARA (OPÇÃO 1) OU 2 PARA (OPÇÃO 2):");
+        if (opcao == 1) {
+            conteudoBasico();
+        }
 
-         int opcao = ler.nextInt();
-  
-         while(opcao != 1 && opcao != 2){
-         System.out.printf("Digite 1 ou 2: ");
-         opcao = ler.nextInt();
-         }
-  
-  
-         //Opção 1
-         if(opcao == 1){
-         System.out.println("\n\nContinuar com opção 1:\n"+nome+": Surgiu uma curiosidade..."
-                          + "\nComo você sabe exatamente o que precisa para quebrar o sistema de segurança ?");
-        
-         System.out.println("\nDebug: Isso não é importante, a partir de agora você"
-                          + "\nprecisa se dedicar, não podemos perder tempo. "
-                          + "\nTemos que abrir o portão antes que seja tarde demais.");
-     
-         System.out.println("Vamos começar, fiz essa apostila dividida em 3 módulos,"
-                           + "\ncada um com um nível de complexidade diferente."
-                           + "\nO primeiro módulo aborda conceitos básicos sobre"
-                           + "\nestrutura de repetição."
-                           + "\nLeia, quando terminar faça os dois testes que está"
-                           + "\n no seu computador.");
-         
-         System.out.println("\nVocê concorda balançado a cabeça e começa a ler o material.");
-          
-         }
-  
-         
-         //Opção 2
-         else {
-         System.out.println("\n\nContinuação opção 2:\n"+nome+": Detalhe um pouco mais.");
-         System.out.println("\nDebug: Fiz essa apostila dividida em 3 módulos,"
-                          + "\ncada um com um nível de complexidade diferente."
-                          + "\nO primeiro módulo aborda conceitos básicos sobre"
-                          + "\nestrutura de repetição."
-                          + "\nLeia, quando terminar faça os dois testes que está"
-                          + "\nno computador.");
-         
-           System.out.println("\n\nVocê concorda balançado a cabeça e começa a ler o material.");
-         
-         }
-  
-         
-         //Acessar material
-         System.out.println("Digite 1 para ler o material: ");
-         opcao = ler.nextInt();
-         System.out.println("\n");
-         while(opcao != 1){
-         System.out.printf("Digite 1 para ler o material: ");
-         opcao = ler.nextInt();
-         } 
-     
-         if(opcao == 1){
-         conteudoBasico();  
-         }
-     
-   
-     
-         //Fazer 1° Desafio 
-         System.out.println("\n\nESTÁ PRONTO PARA FAZER O 1º TESTE ?");
-         System.out.println("Digite 1 para <SIM>");
-         opcao = ler.nextInt();
-         System.out.println("\n");
-         while(opcao != 1){
-         System.out.printf("Digite 1 para fazer o 1º teste: ");
-         opcao = ler.nextInt();
-         } 
-     
-         if(opcao == 1){
-         Desafio1();  
-         }
-     
-         //Fazer 2° Desafio 
-         System.out.println("\n\nESTÁ PRONTO PARA FAZER O 2º TESTE ?");
-         System.out.println("Digite 1 para <SIM>");
-         opcao = ler.nextInt();
-         System.out.println("\n");
-         while(opcao != 1){
-         System.out.printf("Digite 1 para fazer o 2º teste: ");
-         opcao = ler.nextInt();
-         } 
-     
-         if(opcao == 1){
-         Desafio2();  
-         }
-     
-     
-     
-         System.out.println("\n\nDebug: Segundo módulo é intermediário, com tópicos"
-                          + "\nmais específicos sobre cada parte que compõem o for."
-                          + "\nLembre-se, quando terminar digite 1 para fazer outro teste.");
 
-         
-         
-         //Ler o ConteudoIntermediario sobre For
-         System.out.println("Digite 1 para ler 2º material: ");
-         opcao = ler.nextInt();
-         System.out.println("\n");
-         while(opcao != 1){
-         System.out.printf("Digite 1 para ler 2º material: ");
-         opcao = ler.nextInt();
-         } 
-     
-         if(opcao == 1){
-         conteudoIntermediario();  
-         }
-  
-  
-       
-         //Fazer o 3° teste
-         System.out.println("\n\nESTÁ PRONTO PARA FAZER O 3º TESTE ?");
-         System.out.println("Digite 1 para <SIM>");
-         opcao = ler.nextInt();
-         System.out.println("\n");
-         while(opcao != 1){
-         System.out.printf("Digite 1 para fazer o 3º teste: ");
-         opcao = ler.nextInt();
-         } 
-     
-         if(opcao == 1){
-         Desafio3();  
-         }
-      
-  
-  
-     
-         System.out.println("\n\nDebug: Já o terceiro módulo é avançado, com conteúdo"
-                          + "\ntécnico e detalhado sobre cada iteração do for.");
-     
-         
-         //Ler o conteudoAvançado sobre For 
-         System.out.println("Digite 1 para ler 3º material: ");
-         opcao = ler.nextInt();
-         System.out.println("\n");
-         while(opcao != 1){
-         System.out.printf("Digite 1 para ler 3º material: ");
-         opcao = ler.nextInt();
-         } 
-     
-         if(opcao == 1){
-         conteudoAvançado();  
-         }
-         
-         
-     
-         //Fazer 4° Teste
-         System.out.println("\n\nESTÁ PRONTO PARA FAZER O 4º TESTE ?");
-         System.out.println("Digite 1 para <SIM>");
-         opcao = ler.nextInt();
-         System.out.println("\n");
-         while(opcao != 1){ 
-         System.out.printf("Digite 1 para fazer o 4º teste: ");
-         opcao = ler.nextInt();
-         } 
-     
-         if(opcao == 1){
-         Desafio4();  
-         }
-  
-     
-     
-     
-         System.out.println("\nDebug pega o celular e manda um áudio aos rebeldes"
-                          + "\ninformando que o momento para invadir o prédio do"
-                          + "\ngoverno chegou, e há duas opções:");
-         
-         System.out.println("\n-----> ESCOLHA <------");
-         System.out.println("Opção 1: Se desesperar e dizer que não se sente pronto para a invasão.");
-         System.out.println("Opção 2: Se manter calmo e confiante, dizendo que está pronto para invadir o sistema de segurança.");
-         System.out.println("\nDIGITE 1 PARA (OPÇÃO 1) OU 2 PARA (OPÇÃO 2):");
-     
-         opcao = ler.nextInt();
-  
-         while(opcao != 1 && opcao != 2){
-         System.out.printf("Digite 1 ou 2: ");
-         opcao = ler.nextInt();
-         }
-  
-  
-         if(opcao == 1){
-         System.out.println("\n\nContinuar com opção 1:\n"+nome+": Como assim ??"
-                          + "\nNão estou pronto agora.");
-         System.out.println("\nDebug: Está sim. Inclusive, você terá o material"
-                          + "\ntodo em mãos para consultar, se acalme.");
+        //Fazer 1° Desafio
+        System.out.printf("\n\n" + TextMenus.DOIS + "\n", 1, 1, "SIM");
+
+        opcao = ler.nextInt();
+        System.out.println("\n");
+        while (opcao != 1) {
+            System.out.print("Digite 1 para fazer o 1º teste: ");
+            opcao = ler.nextInt();
+        }
+
+        if (opcao == 1) {
+            Desafio1();
+        }
+
+        //Fazer 2° Desafio
+        System.out.printf("\n\n" + TextMenus.DOIS + "\n", 2, 1, "SIM");
+        // TODO transformar em método
+        opcao = ler.nextInt();
+        System.out.println("\n");
+        while (opcao != 1) {
+            System.out.print("Digite 1 para fazer o 2º teste: ");
+            opcao = ler.nextInt();
+        }
+
+        if (opcao == 1) {
+            Desafio2();
+        }
+
+
+        System.out.printf("\n\n" + Message.TRINTA_E_OITO + "\n", "Debug", 1);
+
+        //Ler o conteúdo intermediário sobre 'For'
+        System.out.println("Digite 1 para ler 2º material: ");
+        opcao = ler.nextInt();
+        System.out.println("\n");
+        while (opcao != 1) {
+            System.out.printf(Message.TRINTA_E_NOVE.toString(), 1, 2);
+            opcao = ler.nextInt();
+        }
+
+        if (opcao == 1) {
+            conteudoIntermediario();
+        }
+
+
+        //Fazer o 3° teste
+        System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
+
+        opcao = ler.nextInt();
+        System.out.println("\n");
+        while (opcao != 1) {
+            System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
+            opcao = ler.nextInt();
+        }
+
+        if (opcao == 1) {
+            Desafio3();
+        }
+
+        System.out.printf("\n\n" + Message.QUARENTA + "\n", "Debug");
+
+        //Ler o conteúdo avançado sobre 'For'
+        System.out.printf(Message.TRINTA_E_NOVE.toString(), 1, 3);
+        opcao = ler.nextInt();
+        System.out.println("\n");
+        while (opcao != 1) {
+            System.out.print("Digite 1 para ler 3º material: ");
+            opcao = ler.nextInt();
+        }
+
+        if (opcao == 1) {
+            conteudoAvançado();
+        }
+
+
+        //Fazer 4° Teste
+        System.out.printf("\n\n" + TextMenus.DOIS + "\n", 4, 1, "SIM");
+        opcao = ler.nextInt();
+        System.out.println("\n");
+        while (opcao != 1) {
+            System.out.printf(Message.QUARENTA_E_UM.toString(), 1, 4);
+            opcao = ler.nextInt();
+        }
+
+        if (opcao == 1) {
+            Desafio4();
+        }
+
+
+        System.out.printf("\n" + Message.QUARENTA_E_DOIS + "\n", "Debug");
+        System.out.printf(TextMenus.TRES + "\n", 1, 2, 1, 1, 2, 2);
+
+        opcao = ler.nextInt();
+
+        while (opcao != 1 && opcao != 2) {
+            System.out.print("Digite 1 ou 2: ");
+            opcao = ler.nextInt();
+        }
+
+
+        if (opcao == 1) {
+            System.out.printf("\n\n" + Message.QUARENTA_E_TRES + "\n", 1, nome);
+            System.out.printf("\n" + Message.QUARENTA_E_QUATRO + "\n", "Debug");
+        } else {
+            System.out.printf("\n\n" + Message.QUARENTA_E_CINCO + "\n", 2, nome);
+            System.out.printf("\n" + Message.QUARENTA_E_SEIS + "\n", "Debug");
         }
 
         continuarEnredo();
