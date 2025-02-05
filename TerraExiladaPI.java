@@ -408,39 +408,39 @@ public class TerraExiladaPI {
         if (resposta1.equalsIgnoreCase("a")) {
             System.out.println("\n----------> SENHA CORRETA");
             System.out.println("----------> ABRINDO PORTÃO");
-            ConclusaoFinal1(); 
-         }else{
-            tentativas = tentativas+1;
-             System.out.println("----> Tentativa " + tentativas);
-             System.out.println("----> Acesso Negado");
+            ConclusaoFinal1();
+        } else {
+            tentativas = tentativas + 1;
+            System.out.println("----> Tentativa " + tentativas);
+            System.out.println("----> Acesso Negado");
             while (tentativas < 5) {
-            System.out.println("\nQual for gera a sequência da senha para abrir o portão ? ");
-            System.out.printf("a)for (int i = 13; i <= 35; i = i + 11)\n" +
-            "b)for (int i = 13; i < 35; i = i + 9)\n" +
-            "c)for (int i = 13; i > 35;  i = i + 15)\n" +
-            "d)for (int i = 13; i = 35; i = i + 6)\n"); 
-             resposta1 = scanner.nextLine();
-          
-           // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-           validarAlternativa(resposta1);
-            
-              if (resposta1.equalsIgnoreCase("a")) {
-                 System.out.println("\n----------> SENHA CORRETA");
-                 System.out.println("----------> ABRINDO PORTÃO");
-                 ConclusaoFinal1();
-               break;
-            } else {
-               tentativas = tentativas+1;
-               System.out.println("----> Tentativa " + tentativas);
-               System.out.println("----> Acesso Negado");
-            } 
-           
-         }
-            
-      }
-         
-             if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
+                System.out.println("\nQual for gera a sequência da senha para abrir o portão ? ");
+                alternativas = new String[]{
+                        "for (int i = 13; i <= 35; i = i + 11)",
+                        "for (int i = 13; i < 35; i = i + 9)",
+                        "for (int i = 13; i > 35;  i = i + 15)",
+                        "for (int i = 13; i = 35; i = i + 6)"
+                };
+                System.out.print(listarAlternativas(alternativas));
                 //Enquanto a resposta não for uma alternativa válida, continua pedindo.
+                resposta1 = validarAlternativa(options);
+
+                if (resposta1.equalsIgnoreCase("a")) {
+                    System.out.println("\n----------> SENHA CORRETA");
+                    System.out.println("----------> ABRINDO PORTÃO");
+                    ConclusaoFinal1();
+                    break;
+                } else {
+                    tentativas = tentativas + 1;
+                    System.out.println("----> Tentativa " + tentativas);
+                    System.out.println("----> Acesso Negado");
+                }
+
+            }
+
+        }
+
+        if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
             System.out.println("\n----------> SENHA CORRETA");
             System.out.println("----------> ABRINDO PORTÃO");
             ConclusaoFinal1();
