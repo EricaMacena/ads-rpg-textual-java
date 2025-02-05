@@ -5,9 +5,9 @@ public enum TextMenus {
             -----> ESCOLHA <------
             Opção 1: Perguntar como ele sabe exatamente o que precisa.
             Opção 2: Não questionar. Pedir para continuar com a explicação.
-            DIGITE 1 PARA (OPÇÃO 1) OU 2 PARA (OPÇÃO 2): """),
+            DIGITE 1 PARA (OPÇÃO 1) OU 2 PARA (OPÇÃO 2)"""),
     DOIS("ESTÁ PRONTO PARA FAZER O %dº TESTE ?" +
-            "\nDigite %d para <%s>: "),
+            "\nDigite %d para <%s>"),
     TRES("""
             -----> ESCOLHA <------
             Opção %s: Se desesperar e dizer que não se sente pronto para a invasão.
