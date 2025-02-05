@@ -803,78 +803,34 @@ public class TerraExiladaPI {
 
         System.out.println("\n\n-----> FIM <-----");
     }
-     
-      
-    
-    
-       
-    
-    
-    
-         public static void main(String[] args) {
-         Scanner ler = new Scanner(System.in); 
-         int continuar = 0;
-        
-         System.out.println("Bem-vindo a um mundo chamado de [Terra Exilada],"
-                        + "\nonde uma guerra devastadora deixou metade do"
-                        + "\nplaneta em ruínas."
-                        + "\nOs sobreviventes encontraram refúgio em um"
-                        + "\nlocal isolado, buscando proteção e esperança"
-                        + "\nem meio à destruição..");
-         
-         System.out.println("\nNo entanto, a promessa de segurança se transformou"
-                          + "\nem opressão quando um grupo de pessoas começou a"
-                          + "\nabusar de sua autoridade, exercendo poder sobre os"
-                          + "\ndesarmados."
-                          + "\nEssas pessoas são o governo, que controla a todos"
-                          + "\ne os mantêm aprisionados com um portão fechado.");
-         
-         
-         System.out.println("\nAqueles sem armas são tratados como segunda"
-                          + "\nclasse, sujeitos a abusos e privados de seus"
-                          + "\ndireitos básicos."
-                          + "\nA liberdade se tornou uma ilusão distante,"
-                          + "\ne a vida nacidade é marcada pela opressão"
-                          + "\ne desespero.");
-         
-         
-         
-         
-         continuarEnredo();
-         
-         
-         System.out.println("\nNo entanto, um grupo  destemido está determinado a derrubar o governo"
-                          + "\nem prol de uma causa: a liberdade."
-                          + "\nO líder Debug nomeou o grupo de [Rebeldes], os membros estão dispostos"
-                          + "\na lutar e acabar com as injustiças. A resistência está se formando e a"
-                          + "\nbatalha para conquistar a verdadeira liberdade está prestes a COMEÇAR."
-                          + "\n------> CHEGOU A SUA HORA <------");
-         
-         
-       
-         
-         System.out.println("\nQUAL O NOME DO SEU PERSONAGEM ?");
-         String nome = ler.next();
-        
-         
-         
-         System.out.println("\n\nUm dia, "+nome+" começa a ouvir rumores sobre um misterioso programador"
-                          + "\nchamado Debug, ele está ensinando o que é necessário para abrir o portão."
-                          + "\nAs pessoas que se cansaram do governo conhecem Debug através de várias"
-                          + "\nmaneiras, desde mensagens secretas em fóruns de programação até encontros"
-                          + "\nnoturnos em lugares isolados. Porém, Ninguém sabe sua verdadeira identidade"
-                          + "\nmas todos reconhecem sua habilidade em programação.");
 
+    private static int obterOpcao(Scanner ler, String mensagem, String mensagemErro, int minIncluso, int maxIncluso) {
+        if (ler == null) throw new IllegalArgumentException("Objeto do tipo Scanner não pode ser nulo.");
+        if (mensagemErro == null || mensagemErro.trim().isEmpty()) mensagemErro = "Valor informado Inválido" ;
+        if (maxIncluso < minIncluso) {
+            int auxiliar = maxIncluso;
+            maxIncluso = minIncluso;
+            minIncluso = auxiliar;
+        }
 
-         System.out.println("\n"+nome+" estava a caminho de casa após um longo dia de trabalho quando avistou"
-                          + "\nDebug andando pela rua. "
-                          + "\nCurioso(a), você decidiu segui-lo, pensando que ele poderia estar a caminho de"
-                          + "\nalgum encontro com os rebeldes. "
-                          + "\nAcompanhando-o, vocês chegam a um beco escuro e isolado, quando Debug finalmente"
-                          + "\nte percebe a sua presença e vira-se bruscamente para você.");
-     
-          continuarEnredo();
-
+        int opcao = Integer.MIN_VALUE;
+        do {
+            try {
+                System.out.print(mensagem);
+                opcao = Integer.parseInt(ler.nextLine());
+                if (opcao < minIncluso || opcao > maxIncluso)
+                    throw new IllegalArgumentException("Valores fora da faixa permitida!");
+            } catch (IllegalArgumentException ex) {
+                System.err.println(mensagemErro);
+                System.err.flush();
+                try {
+                    Thread.sleep(40);
+                } catch (InterruptedException ignored) {
+                }
+            }
+        } while (opcao < minIncluso || opcao > maxIncluso);
+        return opcao;
+    }
 
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
@@ -939,13 +895,7 @@ public class TerraExiladaPI {
         System.out.printf("\n" + Message.TRINTA_E_DOIS + "\n", "Debug");
         System.out.println("\n" + TextMenus.UM);
 
-        // TODO transformar num método
-        int opcao = ler.nextInt();
-
-        while (opcao != 1 && opcao != 2) {
-            System.out.print("Digite 1 ou 2: ");
-            opcao = ler.nextInt();
-        }
+        int opcao = obterOpcao(ler, "Digite 1 ou 2: ", "Valor informado incorreto!\n", 1, 2);
 
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.TRINTA_E_TRES + "\n", nome);
@@ -967,90 +917,56 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
+        opcao = obterOpcao(ler, Message.TRINTA_E_NOVE.toString().formatted(1, 1), "Informe apenas 1 para ler o material", 1, 1);
+
         conteudoBasico();
 
         //Fazer o 1° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 1, 1, "SIM");
 
-        opcao = ler.nextInt();
-        System.out.println("\n");
-        while (opcao != 1) {
-            System.out.print("Digite 1 para fazer o 1º teste: ");
-            opcao = ler.nextInt();
-        }
+        opcao = obterOpcao(ler, "Digite 1 para fazer o 1° teste: ", "Informe apenas 1 para acessar o 1º teste", 1, 1);
 
         Desafio1();
 
         //Fazer o 2° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 2, 1, "SIM");
-        // TODO transformar em método
-        opcao = ler.nextInt();
-        System.out.println("\n");
-        while (opcao != 1) {
-            System.out.print("Digite 1 para fazer o 2º teste: ");
-            opcao = ler.nextInt();
-        }
+
+        opcao = obterOpcao(ler, "Digite 1 para fazer o 2° teste: ", "Informe apenas 1 para acessar o 2º teste", 1, 1);
 
         Desafio2();
 
         System.out.printf("\n\n" + Message.TRINTA_E_OITO + "\n", "Debug", 1);
 
         //Ler o conteúdo intermediário sobre 'For'
-        System.out.println("Digite 1 para ler 2º material: ");
-        opcao = ler.nextInt();
-        System.out.println("\n");
-        while (opcao != 1) {
-            System.out.printf(Message.TRINTA_E_NOVE.toString(), 1, 2);
-            opcao = ler.nextInt();
-        }
+        opcao = obterOpcao(ler, Message.TRINTA_E_NOVE.toString().formatted(1, 2), "Informe apenas 1 para ler o 2º material", 1, 1);
 
         conteudoIntermediario();
 
         //Fazer o 3° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
 
-        opcao = ler.nextInt();
-        System.out.println("\n");
-        while (opcao != 1) {
-            System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
-            opcao = ler.nextInt();
-        }
+        opcao = obterOpcao(ler, "Digite 1 para fazer o 3° teste: ", "Informe apenas 1 para acessar o 3º teste", 1, 1);
 
         Desafio3();
 
         System.out.printf("\n\n" + Message.QUARENTA + "\n", "Debug");
 
         //Ler o conteúdo avançado sobre 'For'
-        System.out.printf(Message.TRINTA_E_NOVE.toString(), 1, 3);
-        opcao = ler.nextInt();
-        System.out.println("\n");
-        while (opcao != 1) {
-            System.out.print("Digite 1 para ler 3º material: ");
-            opcao = ler.nextInt();
-        }
+        opcao = obterOpcao(ler, Message.TRINTA_E_NOVE.toString().formatted(1, 3), "Informe apenas 1 para acessar o 3º teste", 1, 1);
 
         conteudoAvançado();
 
         //Fazer o 4° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 4, 1, "SIM");
-        opcao = ler.nextInt();
-        System.out.println("\n");
-        while (opcao != 1) {
-            System.out.printf(Message.QUARENTA_E_UM.toString(), 1, 4);
-            opcao = ler.nextInt();
-        }
+
+        opcao = obterOpcao(ler, Message.QUARENTA_E_UM.toString().formatted(1, 4), "Informe apenas 1 para acessar o 4º teste", 1, 1);
 
         Desafio4();
 
         System.out.printf("\n" + Message.QUARENTA_E_DOIS + "\n", "Debug");
         System.out.printf(TextMenus.TRES + "\n", 1, 2, 1, 1, 2, 2);
 
-        opcao = ler.nextInt();
-
-        while (opcao != 1 && opcao != 2) {
-            System.out.print("Digite 1 ou 2: ");
-            opcao = ler.nextInt();
-        }
+        opcao = obterOpcao(ler, "Digite 1 ou 2: ", "Digite apenas 1 ou 2!\n", 1, 2);
 
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.QUARENTA_E_TRES + "\n", 1, nome);
