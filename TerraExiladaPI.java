@@ -1090,6 +1090,8 @@ public class TerraExiladaPI {
 
          //Se for 1 vai jogar desafio final 1
          if (numeroSorteado == 1) {
+        //Se for 1 vai jogar desafio final 1
+        if (numeroSorteado == 1) {
             System.out.println("\n\n----> DESAFIO FINAL SORTEADO (1) <------");
             DesafioFinalA1();
             
@@ -1103,3 +1105,12 @@ public class TerraExiladaPI {
   
      }
 
+        //Se for 2 vai jogar o desafio final 2
+        } else if (numeroSorteado == 2) {
+            System.out.println("\n\n----> DESAFIO FINAL SORTEADO (2) <------");
+            DesafioFinalB1();
+        }
+
+    }
+
+}
