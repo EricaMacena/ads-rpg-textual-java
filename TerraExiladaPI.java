@@ -87,21 +87,11 @@ public class TerraExiladaPI {
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
 
-    // Exibe as alternativas 
-    System.out.println("\n--- Desafio 1 ---");
-    System.out.println("Qual a função do comando \"for\" em linguagens de programação? ");
-    System.out.println("a) " + alternativas[0] + "\n" +
-            "b) " + alternativas[1] + "\n" +
-            "c) " + alternativas[2] + "\n" +
-            "d) " + alternativas[3] + "\n");
-        //Exibe as alternativas
         //Exibe as alternativas
         System.out.println("\n--- Desafio 1 ---");
         System.out.println("Qual a função do comando \"for\" em linguagens de programação?");
         System.out.println(listarAlternativas(alternativas));
 
-    int tentativas = 0;
-    int erros = 0;
         int tentativas = 0;
         int erros = 0;
 
@@ -111,22 +101,18 @@ public class TerraExiladaPI {
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
-        if (alternativas[escolha].contains("Repetir uma sequência de comandos por um número determinado de vezes")) {
-            System.out.println("Parabéns, você acertou!");
-            break;
-        } else {
-            erros++;
-            System.out.println("Você errou.");
-            System.out.println("----> Tentativa " + erros);
-            Collections.shuffle(Arrays.asList(alternativas));
-            System.out.println("\n\nQual a função do comando \"for\" em linguagens de programação? ");
-            System.out.println("a) " + alternativas[0] + "\n" +
-                    "b) " + alternativas[1] + "\n" +
-                    "c) " + alternativas[2] + "\n" +
-                    "d) " + alternativas[3] + "\n");
-            tentativas++;
-        }
-    }
+            if (alternativas[escolha].contains("Repetir uma sequência de comandos por um número determinado de vezes")) {
+                System.out.println("Parabéns, você acertou!");
+                break;
+            } else {
+                erros++;
+                System.out.println("Você errou.");
+                System.out.println("----> Tentativa " + erros);
+                Collections.shuffle(Arrays.asList(alternativas));
+                System.out.println("\n\nQual a função do comando \"for\" em linguagens de programação? ");
+                System.out.println(listarAlternativas(alternativas));
+                tentativas++;
+            }
         }
 
         if (tentativas >= 3) {
@@ -150,14 +136,6 @@ public class TerraExiladaPI {
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
 
-    // Exibe as alternativas 
-    System.out.println("\n--- Desafio 2 ---");
-    System.out.println("Quais são as 3 partes que compõem a estrutura for ? ");
-    System.out.println("a) " + alternativas[0] + "\n" +
-            "b) " + alternativas[1] + "\n" +
-            "c) " + alternativas[2] + "\n" +
-            "d) " + alternativas[3] + "\n");
-        //Exibe as alternativas
         //Exibe as alternativas
         System.out.println("\n--- Desafio 2 ---");
         System.out.println("Quais são as 3 partes que compõem a estrutura for ? ");
@@ -215,38 +193,15 @@ public class TerraExiladaPI {
         System.out.println("Qual é o papel da \"condição\" em um loop for ? ");
         System.out.println(listarAlternativas(alternativas));
 
-    int tentativas = 0;
-    int erros = 0;
         int tentativas = 0;
+        int erros = 0;
 
-    while (tentativas < 3) {
-        String resposta = scanner.nextLine();
-
-       // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-         validarAlternativa(resposta);
-            //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         while (tentativas < 3) {
             //Enquanto a resposta não for uma alternativa válida, continua pedindo.
             String resposta = validarAlternativa(options);
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
-        if (alternativas[escolha].contains(  "Verificar se o loop deve continuar executando")) {
-            System.out.println("Parabéns, você acertou!");
-            break;
-        } else {
-            erros++;
-            System.out.println("Você errou.");
-            System.out.println("----> Tentativa " + erros);
-            Collections.shuffle(Arrays.asList(alternativas));
-            System.out.println("\n\nQual é o papel da \"condição\" em um loop for ? ");
-            System.out.println("a) " + alternativas[0] + "\n" +
-                    "b) " + alternativas[1] + "\n" +
-                    "c) " + alternativas[2] + "\n" +
-                    "d) " + alternativas[3] + "\n");
-            tentativas++;
-        }
-    }
             if (alternativas[escolha].contains("Verificar se o loop deve continuar executando")) {
                 System.out.println("Parabéns, você acertou!");
                 break;
@@ -261,25 +216,16 @@ public class TerraExiladaPI {
             }
         }
 
-    if (tentativas >= 3) {
-        System.out.println("-------> Você esgotou suas tentativas."
-                + "\nA condição de continuação em um loop \"for\" é uma expressão"
-                + "\nque determina se o loop deve continuar executando ou se deve"
-                + "\nser encerrado."
-                + "\nEssa condição é verificada a cada iteração do loop e, se for"
-                + "\navaliada como falsa, o loop será interrompido e a execução"
-                + "\nserá transferida para o próximo trecho após o loop.");
-        
-    }
-
-}
-      
-      
-      
-       
-      //4° Teste sobre o conteudoAvançado do For
-       public static void Desafio4() {
-     Scanner scanner = new Scanner(System.in);
+        if (tentativas >= 3) {
+            System.out.println("""
+                    -------> Você esgotou suas tentativas.
+                    A condição de continuação em um loop "for" é uma expressão
+                    que determina se o loop deve continuar executando ou se deve
+                    ser encerrado.
+                    Essa condição é verificada a cada iteração do loop e, se for
+                    avaliada como falsa, o loop será interrompido e a execução
+                    será transferida para o próximo trecho após o loop.""");
+        }
 
     }
 
@@ -298,14 +244,6 @@ public class TerraExiladaPI {
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
 
-     // Exibe as alternativas
-      System.out.println("\n--- Desafio 4 ---");
-      System.out.println("Como você define um loop for que mostre 10 números, começando com o zero ? ");
-      System.out.println("a) " + alternativas[0] + "\n" +
-            "b) " + alternativas[1] + "\n" +
-            "c) " + alternativas[2] + "\n" +
-            "d) " + alternativas[3] + "\n");
-        //Exibe as alternativas
         //Exibe as alternativas
         System.out.println("\n--- Desafio 4 ---");
         System.out.println("Como você define um loop for que mostre 10 números, começando com o zero ? ");
@@ -314,34 +252,12 @@ public class TerraExiladaPI {
         int tentativas = 0;
         int erros = 0;
 
-     while (tentativas < 3) {
-        String resposta = scanner.nextLine();
-
-        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        validarAlternativa(resposta);
-            //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         while (tentativas < 3) {
             //Enquanto a resposta não for uma alternativa válida, continua pedindo.
             String resposta = validarAlternativa(options);
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
-        if (alternativas[escolha].contains(  "for (int i = 0; i < 10; i++)")) {
-            System.out.println("Parabéns, você acertou!");
-            break;
-        } else {
-            erros++;
-            System.out.println("Você errou.");
-            System.out.println("----> Tentativa " + erros);
-            Collections.shuffle(Arrays.asList(alternativas));
-            System.out.println("\n\nComo você define um loop for que mostre 10 números, começando com o zero ? ");
-            System.out.println("a) " + alternativas[0] + "\n" +
-                    "b) " + alternativas[1] + "\n" +
-                    "c) " + alternativas[2] + "\n" +
-                    "d) " + alternativas[3] + "\n");
-            tentativas++;
-        }
-    }
             if (alternativas[escolha].contains("for (int i = 0; i < 10; i++)")) {
                 System.out.println("Parabéns, você acertou!");
                 break;
@@ -365,6 +281,11 @@ public class TerraExiladaPI {
     public static void DesafioFinalA1() {
         List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
+        String[] alternativas = new String[]{
+                "for (int i = 0; i <= 8; i = i + 1)",
+                "for (int i = 2; i <= 8; i = i + 2)",
+                "for (int i = 2; i < 8;  i = i + 2)",
+                "for (int i = 2; i <= 8; i = i + 1)"
         };
         int tentativas = 0;
 
@@ -548,74 +469,6 @@ public class TerraExiladaPI {
                 "for (int i = 2; i <= 8; i = i + 1)"
         };
 
-
-        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        validarAlternativa(resposta);
-        
-        
-        if(resposta.equalsIgnoreCase("b")){
-             System.out.println("\n\nLOGIN: GOVERNO");
-             System.out.println("SENHA: 2 4 6 8");
-             System.out.println("LOGANDO ......\n"); 
-             System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                              + "\narquivos e começa a vasculhar para encontrar informações que possam"
-                              + "\najudar abrir o portão.");
-             System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                              + "\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                              + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                              + "\nde segurança do governo.");
-             System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                              + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                              + "\npara abrir o portão."
-                              + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                              + "\ncomo uma chave para a liberdade. "
-                              + "\nA senha é: 29, 38 e 47.");
-             DesafioFinalB2(tentativas);
-         }else{
-            tentativas = tentativas+1;
-             System.out.println("----> Tentativa " + tentativas);
-             System.out.println("----> Acesso Negado");
-        while (tentativas < 5) {
-            System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
-            System.out.printf("a)for (int i = 0; i <= 8; i = i + 1)\n" +
-            "b)for (int i = 2; i <= 8; i = i + 2)\n" +
-            "c)for (int i = 2; i < 8;  i = i + 2)\n" +
-            "d)for (int i = 2; i <= 8; i = i + 1)\n");
-            resposta = scanner.nextLine();
-          
-              
-       // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        validarAlternativa(resposta);
-            
-            if (resposta.equalsIgnoreCase("b")) {
-             System.out.println("\n\nLOGIN: GOVERNO");
-             System.out.println("SENHA: 2 4 6 8");
-             System.out.println("LOGANDO ......\n"); 
-             System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                              + "\narquivos e começa a vasculhar para encontrar informações que possam"
-                              + "\najudar abrir o portão.");
-             System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                              + "\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                              + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                              + "\nde segurança do governo.");
-             System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                              + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                              + "\npara abrir o portão."
-                              + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                              + "\ncomo uma chave para a liberdade. "
-                              + "\nA senha é: 29, 38 e 47.");
-                DesafioFinalB2(tentativas);
-                break;
-            } else {
-               tentativas = tentativas+1;
-               System.out.println("----> Tentativa " + tentativas);
-               System.out.println("----> Acesso Negado");
-            }
-         }
-      }
-        
-         
-        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         System.out.print(listarAlternativas(alternativas));
         //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta = validarAlternativa(options);
@@ -670,6 +523,14 @@ public class TerraExiladaPI {
                             Usando suas habilidades em programação, conseguiu descriptografá-lo e
                             descobriu que se trata de um documento com informações sobre o sistema
                             de segurança do governo.""");
+                    System.out.println("""
+
+                            O arquivo contém várias informações sobre os departamentos do prédio.
+                            Porém, uma parte específica chamou sua atenção: A combinação numérica
+                            para abrir o portão.
+                            Era um mistério até aquele momento, mas agora está diante de seus olhos,
+                            como uma chave para a liberdade.\s
+                            A senha é: 29, 38 e 47.""");
                     DesafioFinalB2(tentativas);
                     break;
                 } else {
@@ -726,48 +587,12 @@ public class TerraExiladaPI {
         if (resposta1.equalsIgnoreCase("a")) {
             System.out.println("\n----------> SENHA CORRETA");
             System.out.println("----------> ABRINDO PORTÃO");
-            ConclusaoFinal1(); 
-         }else{
-            tentativas = tentativas+1;
-             System.out.println("----> Tentativa " + tentativas);
-             System.out.println("----> Acesso Negado");
+            ConclusaoFinal1();
         } else {
             tentativas = tentativas + 1;
             System.out.println("----> Tentativa " + tentativas);
             System.out.println("----> Acesso Negado");
             while (tentativas < 5) {
-            System.out.println("\nQual for gera a sequência da senha para abrir o portão ? ");
-            System.out.printf("a)for (int i = 29; i <= 47; i = i + 9)\n" +
-            "b)for (int i = 29; i < 47; i = i + 9)\n" +
-            "c)for (int i = 29; i > 47;  i = i + 10)\n" +
-            "d)for (int i = 29; i = 47; i = i + 6)\n"); 
-             resposta1 = scanner.nextLine();
-          
-        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        validarAlternativa(resposta1);
-            
-              if (resposta1.equalsIgnoreCase("a")) {
-                 System.out.println("\n----------> SENHA CORRETA");
-                 System.out.println("----------> ABRINDO PORTÃO");
-                 ConclusaoFinal1();
-               break;
-            } else {
-               tentativas = tentativas+1;
-               System.out.println("----> Tentativa " + tentativas);
-               System.out.println("----> Acesso Negado");
-            } 
-           
-         }
-            
-      }
-         
-             if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-                System.out.print("""
-                        a)for (int i = 29; i <= 47; i = i + 9)
-                        b)for (int i = 29; i < 47; i = i + 9)
-                        c)for (int i = 29; i > 47;  i = i + 10)
-                        d)for (int i = 29; i = 47; i = i + 6)
-                        """);
                 System.out.println("\nQual for gera a sequência da senha para abrir o portão ? ");
                 System.out.print(listarAlternativas(alternativas));
 
@@ -793,10 +618,10 @@ public class TerraExiladaPI {
             System.out.println("\n----------> SENHA CORRETA");
             System.out.println("----------> ABRINDO PORTÃO");
             ConclusaoFinal1();
-            } else if(!resposta1.equalsIgnoreCase("a") && (tentativas == 5))  {
-             System.out.println(tentativas + " Tentativas de Invasão:");
-             System.out.println("SISTEMA DE SEGURANÇA ATIVADO"); 
-             ConclusaoFinal2();
+        } else if (!resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
+            System.out.println(tentativas + " Tentativas de Invasão:");
+            System.out.println("SISTEMA DE SEGURANÇA ATIVADO");
+            ConclusaoFinal2();
         }
     }
         
@@ -840,32 +665,7 @@ public class TerraExiladaPI {
         System.out.println("\n\n-----> FIM <-----");
 
     }
-    
-    
-    
-    
-         public static void ConclusaoFinal2(){
-        
-         System.out.println("\nApós a ativação do alarme e a invasão dos guardas, "
-                 + "\na situação se torna caótica."
-                 + "\nTiros por todo local, crianças choram e você sente o peso"
-                 + "\nda responsabilidade e da falha."
-                 + "\nEm meio ao tumulto, você e Debbuging se veem encurralados,"
-                 + "\nbuscando uma saída para a situação desesperadora.");  
-     
-         System.out.println("\nDurante a tentativa de fuga em meio ao caos"
-                 + "\nDebbuging e você acaba sendo capturados pelos guardas."); 
-      
-         System.out.println("\nGovernador: Não quero eles vivos e quanto a "
-                 + "\nCibelle, coloque-a em cativeiro.");
-         
-         
-         System.out.println("Embora a história tenha tomado um rumo sombrio"
-                 + "\ne triste, a coragem e determinação que você e Debbuging"
-                 + "\ndemonstraram ao longo da jornada não serão esquecidas."
-                 + "\nOs rebeldes continuarão em busca da liberdade e vingança.");
-         
-         System.out.println("\n\n-----> FIM <-----");
+
     public static void ConclusaoFinal2() {
         System.out.println("""
 
