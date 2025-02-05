@@ -27,36 +27,28 @@ public class TerraExiladaPI {
         }
     }
 
-
     public static void conteudoIntermediario() {
-        try {
-            Desktop.getDesktop().browse(new URI(Urls.CONTEUDO_INTERMEDIARIO.getUrl()));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        conteudo(Urls.CONTEUDO_INTERMEDIARIO);
     }
 
-
-    public static void conteudoAvançado() {
-        try {
-            Desktop.getDesktop().browse(new URI(Urls.CONTEUDO_AVANCADO.getUrl()));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public static void conteudoAvancado() {
+        conteudo(Urls.CONTEUDO_AVANCADO);
     }
-
 
     //Material sobre operadores relacionais 
     public static void operadoresRelacionais() {
+        conteudo(Urls.OPERADORES_RELACIONAIS);
+    }
+
+    private static void conteudo(Urls url) {
+        if (url == null) throw new IllegalArgumentException("Url informada não pode ser nula");
         try {
-            Desktop.getDesktop().browse(new URI(Urls.OPERADORES_RELACIONAIS.getUrl()));
+            Desktop.getDesktop().browse(new URI(url.getUrl()));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-    
-    
+
     //Continua pedindo uma alternativa válida
     public static void validarAlternativa(String resposta){
         Scanner scanner = new Scanner(System.in);
