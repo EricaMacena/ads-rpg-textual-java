@@ -949,13 +949,10 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        //Opção 1
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.TRINTA_E_TRES + "\n", nome);
             System.out.printf("\n" + Message.TRINTA_E_QUATRO + "\n", "Debug");
-        }
-        //Opção 2
-        else {
+        } else {
             System.out.printf("\n\n" + Message.TRINTA_E_CINCO + "\n", nome);
         }
 
@@ -976,8 +973,7 @@ public class TerraExiladaPI {
             conteudoBasico();
         }
 
-
-        //Fazer 1° Desafio
+        //Fazer o 1° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 1, 1, "SIM");
 
         opcao = ler.nextInt();
@@ -991,7 +987,7 @@ public class TerraExiladaPI {
             Desafio1();
         }
 
-        //Fazer 2° Desafio
+        //Fazer o 2° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 2, 1, "SIM");
         // TODO transformar em método
         opcao = ler.nextInt();
@@ -1004,7 +1000,6 @@ public class TerraExiladaPI {
         if (opcao == 1) {
             Desafio2();
         }
-
 
         System.out.printf("\n\n" + Message.TRINTA_E_OITO + "\n", "Debug", 1);
 
@@ -1021,8 +1016,7 @@ public class TerraExiladaPI {
             conteudoIntermediario();
         }
 
-
-        //Fazer o 3° teste
+        //Fazer o 3° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
 
         opcao = ler.nextInt();
@@ -1051,8 +1045,7 @@ public class TerraExiladaPI {
             conteudoAvançado();
         }
 
-
-        //Fazer 4° Teste
+        // Fazer o 4° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 4, 1, "SIM");
         opcao = ler.nextInt();
         System.out.println("\n");
@@ -1065,7 +1058,6 @@ public class TerraExiladaPI {
             Desafio4();
         }
 
-
         System.out.printf("\n" + Message.QUARENTA_E_DOIS + "\n", "Debug");
         System.out.printf(TextMenus.TRES + "\n", 1, 2, 1, 1, 2, 2);
 
@@ -1075,7 +1067,6 @@ public class TerraExiladaPI {
             System.out.print("Digite 1 ou 2: ");
             opcao = ler.nextInt();
         }
-
 
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.QUARENTA_E_TRES + "\n", 1, nome);
