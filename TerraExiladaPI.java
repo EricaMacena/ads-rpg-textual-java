@@ -335,14 +335,15 @@ public class TerraExiladaPI {
         System.out.println("SENHA: _ _ _ _");
         
         System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
-        System.out.printf("a)for (int i = 0; i <= 8; i = i + 1)\n" +
-            "b)for (int i = 2; i <= 8; i = i + 2)\n" +
-            "c)for (int i = 2; i < 8;  i = i + 2)\n" +
-            "d)for (int i = 2; i <= 8; i = i + 1)\n");
-             String resposta = scanner.nextLine();
-        
-        
-        
+        System.out.print("""
+                a)for (int i = 0; i <= 8; i = i + 1)
+                b)for (int i = 2; i <= 8; i = i + 2)
+                c)for (int i = 2; i < 8;  i = i + 2)
+                d)for (int i = 2; i <= 8; i = i + 1)
+                """);
+        String resposta = scanner.nextLine();
+
+
         // Enquanto a resposta não for uma alternativa válida, continua pedindo.
         validarAlternativa(resposta);
         
@@ -409,6 +410,7 @@ public class TerraExiladaPI {
       }
         
          
+                        """);
         if (resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
             System.out.println("----> Você atingiu o limite máximo de erros:" +tentativas);
                System.out.println("\n\nLOGIN: GOVERNO");
@@ -1129,67 +1131,25 @@ public class TerraExiladaPI {
          System.out.println("\nDebug: Está sim. Inclusive, você terá o material"
                           + "\ntodo em mãos para consultar, se acalme.");
         }
-      
-         else{
-         System.out.println("\n\nContinuar com opção 2:\n"+nome+": Estou pronto para invadir o sistema,"
-                          + "\nestá na hora de alcançarmos nossa liberdade e justiça.");
-         System.out.println("\nDebug sorri e diz: Ótimo! Sua coragem será fundamental nessa missão."
-                          + "\nVamos lá, juntos venceremos essa batalha.");
-      }
-      
-      
-      
-      
-       
-         continuarEnredo();
-     
-      
-      
-         System.out.println("\n\nDebug, você e os rebeldes chegam ao prédio do governo no meio da noite."
-                          + "\nEnquanto alguns grupos espalham bombas de fumaça e gás para neutralizar"
-                          + "\nos guardas, vocês se infiltram no prédio.");
-         System.out.println("\nDebug consegue despistar os seguranças e continua em direção à sala do"
-                          + "\ngovernador."
-                          + "\nChegando lá, ele encontra o governador e começa uma discussão sobre a"
-                          + "\nopressão do povo."
-                          + "\nNesse momento, a esposa do governador entra na sala e se junta à discussão.");
-         System.out.println("\nA esposa revela que não apoia o que o marido está fazendo com as pessoas,"
-                          + "\nmantendo-as em escravidão sem poderem dormir mais de 4 horas por noite e"
-                          + "\ncomendo menos de 2 refeições diárias. Ela conta que já tentou convencê-lo a"
-                          + "\nmudar, mas ele não ouviu.");
-         System.out.println("\nO governador rebate, dizendo que ela deveria apoia-lo por ser mulher dele."
-                          + "\nNesse momento, você é surpreendido(a) quando a esposa do governador revela"
-                          + "\nque está tendo um caso com o Debug.");
-      
-      
-      
-      
 
-         continuarEnredo();
-    
-     
-     
-     
-         System.out.println("\n\nDebug: Cibelle ajude ele enquanto mantenho o governador amarrado aqui..");
-     
-         System.out.println("\nCibelle, acompanha você até o computador do governador, explicando a gravidade"
-                          + "\nda situação. Ela revela que o sistema de segurança é extremamente sensível e"
-                          + "\npermite apenas quatro tentativas de senha antes de acionar o alarme.");
-     
-         System.out.println("\nCom cada tentativa mal sucedida, o risco de ser descoberto aumenta."
-                          + "\nCibelle destaca que, no quinto erro, os seguranças de outros prédios"
-                          + "\nserão alertados e invadirão imediatamente o local.");
-     
-         System.out.println("\nCibelle: 2 4 6 8, essa é a senha para logar.");
-     
-     
-         System.out.println("\n\nDiante do computador, você se prepara mentalmente para enfrentar o desafio que se apresenta.");
-         
-         
-         
-         //------> (sorteia o desafio final)
-         Random random = new Random();
-         int numeroSorteado = random.nextInt(2) + 1; // Gera um número aleatório entre 1 
+        continuarEnredo();
+
+        System.out.printf("\n" + Message.QUARENTA_E_SETE + "\n", "Debug");
+        System.out.printf("\n" + Message.QUARENTA_E_OITO + "\n", "Debug");
+        System.out.println("\n" + Message.QUARENTA_E_NOVE);
+        System.out.printf("\n" + Message.CINQUENTA + "\n", "Debug");
+
+        continuarEnredo();
+
+        System.out.printf("\n\n" + Message.CINQUENTA_E_UM + "\n", "Debug", "Cibelle");
+        System.out.printf("\n" + Message.CINQUENTA_E_DOIS + "\n", "Cibelle");
+        System.out.printf("\n" + Message.CINQUENTA_E_TRES + "\n", "Cibelle");
+        System.out.printf("\n" + Message.CINQUENTA_E_QUATRO + "\n", "Cibelle", "2 4 6 8");
+        System.out.println("\n\n" + Message.CINQUENTA_E_CINCO);
+
+        //------> (sorteia o desafio final)
+        Random random = new Random();
+        int numeroSorteado = random.nextInt(2) + 1; // Gera um número aleatório entre 1
 
          //Se for 1 vai jogar desafio final 1
          if (numeroSorteado == 1) {
