@@ -20,11 +20,7 @@ public class TerraExiladaPI {
 
     //---------> Material em PDF Loop For
     public static void conteudoBasico() {
-        try {
-            Desktop.getDesktop().browse(new URI(Urls.CONTEUDO_BASICO.getUrl()));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        conteudo(Urls.CONTEUDO_BASICO);
     }
 
     public static void conteudoIntermediario() {
@@ -35,7 +31,7 @@ public class TerraExiladaPI {
         conteudo(Urls.CONTEUDO_AVANCADO);
     }
 
-    //Material sobre operadores relacionais 
+    //Material sobre operadores relacionais
     public static void operadoresRelacionais() {
         conteudo(Urls.OPERADORES_RELACIONAIS);
     }
