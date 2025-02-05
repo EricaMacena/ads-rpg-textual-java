@@ -165,10 +165,13 @@ public class TerraExiladaPI {
         }
 
         if (tentativas >= 3) {
-            System.out.println("------> Você esgotou suas tentativas.\n\nAs partes que compõem o for são:"
-                    + "\n1. Inicialização\n" +
-                    "2. Condição de continuação\n" +
-                    "3. Incremento/Decremento");
+            System.out.println("""
+                    ------> Você esgotou suas tentativas.
+
+                    As partes que compõem o for são:
+                    1. Inicialização
+                    2. Condição de continuação
+                    3. Incremento/Decremento""");
         }
 
     }
@@ -726,8 +729,8 @@ public class TerraExiladaPI {
     private static String listarAlternativas(String[] array) {
         StringBuilder resultado = new StringBuilder();
         char letter = 'a';
-        for (int i = 0; i < array.length; i++) {
-            resultado.append("\n%s) %s".formatted(letter++, array[i]));
+        for (String str : array) {
+            resultado.append("\n%s) %s".formatted(letter++, str));
         }
         return resultado.substring(1);
     }
