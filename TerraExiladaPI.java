@@ -842,7 +842,7 @@ public class TerraExiladaPI {
 
         System.out.printf("\n" + Message.QUATRO + "\n", "Debug");
         System.out.println("\nQUAL O NOME DO SEU PERSONAGEM ?");
-        String nome = ler.next();
+        String nome = ler.nextLine().split(" ")[0];
 
         System.out.printf("\n\n" + Message.CINCO + "\n", nome, "Debug", "Debug");
         System.out.printf("\n" + Message.SEIS + "\n", nome, "Debug", "Debug");
@@ -908,14 +908,6 @@ public class TerraExiladaPI {
         System.out.println("\n" + Message.TRINTA_E_SETE + "\n");
 
         //Acessar material
-        System.out.println("Digite 1 para ler o material: ");
-        // TODO transformar num método
-        opcao = ler.nextInt();
-        System.out.println("\n");
-        while (opcao != 1) {
-            System.out.print("Digite 1 para ler o material: ");
-            opcao = ler.nextInt();
-        }
 
         opcao = obterOpcao(ler, Message.TRINTA_E_NOVE.toString().formatted(1, 1), "Informe apenas 1 para ler o material", 1, 1);
 
