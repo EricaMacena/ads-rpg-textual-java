@@ -142,14 +142,12 @@ public class TerraExiladaPI {
         System.out.println("-----> Você esgotou suas tentativas. \nA resposta correta é: Repetir uma sequência de comandos por um número determinado de vezes.");
     }
 
-}
-    
-    
-    
-     
-    //2° Desafio sobre conteúdoBasico do For 
-      public static void Desafio2() {
-    Scanner scanner = new Scanner(System.in);
+    }
+
+
+    //2° Desafio sobre conteúdo básico do 'For'
+    public static void Desafio2() {
+        Scanner scanner = new Scanner(System.in);
 
     // Alternativas
     String[] alternativas = {"for(inicialização; atualização; incrementar ou decrementar)", "for(condição de continuação; inicialização; incrementar ou decrementar)",
@@ -879,6 +877,24 @@ public class TerraExiladaPI {
      
           continuarEnredo();
 
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        System.out.println(Message.UM);
+        System.out.println("\n" + Message.DOIS);
+        System.out.println("\n" + Message.TRES);
+
+        continuarEnredo();
+
+        System.out.printf("\n" + Message.QUATRO + "\n", "Debug");
+        System.out.println("\nQUAL O NOME DO SEU PERSONAGEM ?");
+        String nome = ler.next();
+
+        System.out.printf("\n\n" + Message.CINCO + "\n", nome, "Debug", "Debug");
+        System.out.printf("\n" + Message.SEIS + "\n", nome, "Debug", "Debug");
+
+        continuarEnredo();
+
         System.out.println("\n\nDebug: " + Message.SETE);
         System.out.printf("\n" + nome + ": " + Message.OITO + "\n", nome);
         System.out.printf("\n" + Message.NOVE + "\n", "Debug", nome);
@@ -1086,25 +1102,12 @@ public class TerraExiladaPI {
 
         //------> (sorteia o desafio final)
         Random random = new Random();
-        int numeroSorteado = random.nextInt(2) + 1; // Gera um número aleatório entre 1
+        int numeroSorteado = random.nextInt(2) + 1; // Gera um número aleatório entre 1 e 2
 
-         //Se for 1 vai jogar desafio final 1
-         if (numeroSorteado == 1) {
         //Se for 1 vai jogar desafio final 1
         if (numeroSorteado == 1) {
             System.out.println("\n\n----> DESAFIO FINAL SORTEADO (1) <------");
             DesafioFinalA1();
-            
-         //Se for 2 vai jogar o desafio final 2
-          } else if (numeroSorteado == 2) {
-          System.out.println("\n\n----> DESAFIO FINAL SORTEADO (2) <------");
-          DesafioFinalB1();
-         }
-     
- }
-  
-     }
-
         //Se for 2 vai jogar o desafio final 2
         } else if (numeroSorteado == 2) {
             System.out.println("\n\n----> DESAFIO FINAL SORTEADO (2) <------");
