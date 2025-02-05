@@ -66,11 +66,9 @@ public class TerraExiladaPI {
         }
     
     }
-    
-    
-   
-    public static void continuarEnredo(){
-        Scanner ler = new Scanner(System.in);
+
+    public static void continuarEnredo(Scanner ler) {
+        if (ler == null) throw new IllegalArgumentException("Objeto do tipo Scanner não pode ser nulo.");
         int continuar = 0;
         System.out.println();
         while (continuar != 1) {
@@ -884,7 +882,7 @@ public class TerraExiladaPI {
         System.out.println("\n" + Message.DOIS);
         System.out.println("\n" + Message.TRES);
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n" + Message.QUATRO + "\n", "Debug");
         System.out.println("\nQUAL O NOME DO SEU PERSONAGEM ?");
@@ -893,33 +891,33 @@ public class TerraExiladaPI {
         System.out.printf("\n\n" + Message.CINCO + "\n", nome, "Debug", "Debug");
         System.out.printf("\n" + Message.SEIS + "\n", nome, "Debug", "Debug");
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.println("\n\nDebug: " + Message.SETE);
         System.out.printf("\n" + nome + ": " + Message.OITO + "\n", nome);
         System.out.printf("\n" + Message.NOVE + "\n", "Debug", nome);
         System.out.printf("\n" + Message.DEZ + "\n", nome);
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n\n" + Message.ONZE + "\n", "Debug");
         System.out.printf("\n" + Message.DOZE + "\n", nome);
         System.out.printf("\n" + Message.TREZE + "\n", "Debug");
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.println("\n\n" + Message.QUATORZE);
         System.out.printf("\n" + Message.QUINZE + "\n", "Debug");
         System.out.println("\n" + Message.DEZESSEIS);
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n\n" + Message.DEZESSETE + "\n", "Debug");
         System.out.printf("\n" + Message.DEZOITO + "\n", "Debug");
         System.out.printf("\n" + Message.DEZENOVE + "\n", "Debug");
         System.out.println(Message.VINTE);
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n\n" + Message.VINTE_E_UM + "\n", nome);
         System.out.printf("\n" + Message.VINTE_E_DOIS + "\n", "Debug");
@@ -928,14 +926,14 @@ public class TerraExiladaPI {
         System.out.printf("\n" + Message.VINTE_E_CINCO + "\n", "Debug");
         System.out.println("\n" + Message.VINTE_E_SEIS);
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n\n" + Message.VINTE_E_SETE + "\n", "Debug");
         System.out.printf("\n" + Message.VINTE_E_OITO + "\n", nome);
         System.out.printf("\n" + Message.VINTE_E_NOVE + "\n", "Debug");
         System.out.println("\n" + Message.TRINTA);
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n" + Message.TRINTA_E_UM + "\n", "Debug");
         System.out.printf("\n" + Message.TRINTA_E_DOIS + "\n", "Debug");
@@ -1062,14 +1060,14 @@ public class TerraExiladaPI {
             System.out.printf("\n" + Message.QUARENTA_E_SEIS + "\n", "Debug");
         }
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n" + Message.QUARENTA_E_SETE + "\n", "Debug");
         System.out.printf("\n" + Message.QUARENTA_E_OITO + "\n", "Debug");
         System.out.println("\n" + Message.QUARENTA_E_NOVE);
         System.out.printf("\n" + Message.CINQUENTA + "\n", "Debug");
 
-        continuarEnredo();
+        continuarEnredo(ler);
 
         System.out.printf("\n\n" + Message.CINQUENTA_E_UM + "\n", "Debug", "Cibelle");
         System.out.printf("\n" + Message.CINQUENTA_E_DOIS + "\n", "Cibelle");
