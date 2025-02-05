@@ -969,9 +969,7 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        if (opcao == 1) {
-            conteudoBasico();
-        }
+        conteudoBasico();
 
         //Fazer o 1° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 1, 1, "SIM");
@@ -983,9 +981,7 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        if (opcao == 1) {
-            Desafio1();
-        }
+        Desafio1();
 
         //Fazer o 2° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 2, 1, "SIM");
@@ -997,9 +993,7 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        if (opcao == 1) {
-            Desafio2();
-        }
+        Desafio2();
 
         System.out.printf("\n\n" + Message.TRINTA_E_OITO + "\n", "Debug", 1);
 
@@ -1012,9 +1006,7 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        if (opcao == 1) {
-            conteudoIntermediario();
-        }
+        conteudoIntermediario();
 
         //Fazer o 3° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
@@ -1026,9 +1018,7 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        if (opcao == 1) {
-            Desafio3();
-        }
+        Desafio3();
 
         System.out.printf("\n\n" + Message.QUARENTA + "\n", "Debug");
 
@@ -1041,11 +1031,9 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        if (opcao == 1) {
-            conteudoAvançado();
-        }
+        conteudoAvançado();
 
-        // Fazer o 4° desafio
+        //Fazer o 4° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 4, 1, "SIM");
         opcao = ler.nextInt();
         System.out.println("\n");
@@ -1054,9 +1042,7 @@ public class TerraExiladaPI {
             opcao = ler.nextInt();
         }
 
-        if (opcao == 1) {
-            Desafio4();
-        }
+        Desafio4();
 
         System.out.printf("\n" + Message.QUARENTA_E_DOIS + "\n", "Debug");
         System.out.printf(TextMenus.TRES + "\n", 1, 2, 1, 1, 2, 2);
@@ -1099,8 +1085,7 @@ public class TerraExiladaPI {
         if (numeroSorteado == 1) {
             System.out.println("\n\n----> DESAFIO FINAL SORTEADO (1) <------");
             DesafioFinalA1();
-        //Se for 2 vai jogar o desafio final 2
-        } else {
+        } else { //Se for 2 vai jogar o desafio final 2
             System.out.println("\n\n----> DESAFIO FINAL SORTEADO (2) <------");
             DesafioFinalB1();
         }
