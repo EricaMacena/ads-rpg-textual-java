@@ -334,14 +334,7 @@ public class TerraExiladaPI {
         String[] alternativas = alternativasDoDesafio(DesafioId.A1);
         String[] sequences = {"2 4 6 8", "13, 24 e 35"};
 
-        System.out.println("\n\nLOGIN: GOVERNO");
-        System.out.println("SENHA:" + " _".repeat(sequences[0].split(" ").length));
-
-        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", sequences[0]);
-        System.out.println(listarAlternativas(alternativas));
-
-        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        String resposta = validarAlternativa(options);
+        String resposta = obterResposta(sequences, alternativas);
 
         int tentativas = 0;
         if (resposta.equalsIgnoreCase("b")) {
@@ -393,14 +386,7 @@ public class TerraExiladaPI {
         String[] alternativas = alternativasDoDesafio(DesafioId.A1);
         String[] sequences = {"2 4 6 8", "29, 38 e 47"};
 
-        System.out.println("\n\nLOGIN: GOVERNO");
-        System.out.println("SENHA:" + " _".repeat(sequences[0].split(" ").length));
-
-        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", sequences[0]);
-        System.out.println(listarAlternativas(alternativas));
-
-        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        String resposta = validarAlternativa(options);
+        String resposta = obterResposta(sequences, alternativas);
 
         int tentativas = 0;
         if (resposta.equalsIgnoreCase("b")) {
@@ -444,6 +430,17 @@ public class TerraExiladaPI {
             ConclusaoFinal2();
         }
 
+    }
+
+    private static String obterResposta(String[] sequences, String[] alternativas) {
+        System.out.println("\n\nLOGIN: GOVERNO");
+        System.out.println("SENHA:" + " _".repeat(sequences[0].split(" ").length));
+
+        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", sequences[0]);
+        System.out.println(listarAlternativas(alternativas));
+
+        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
+        return validarAlternativa(options);
     }
 
     public static void DesafioFinalB2(int tentativas) {
