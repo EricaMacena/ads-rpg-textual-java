@@ -14,7 +14,7 @@ public enum TextMenus {
             Opção %s: Se manter calmo e confiante, dizendo que está pronto para invadir o sistema de segurança.
             DIGITE %s PARA (OPÇÃO %s) OU %s PARA (OPÇÃO %s): """),
     ;
-    private String menu;
+    private final String menu;
 
     TextMenus(String menu) {
         this.menu = menu;
