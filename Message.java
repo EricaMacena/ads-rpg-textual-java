@@ -1,4 +1,4 @@
-package com.mycompany.terraexiladapi;
+package terraexiladapi;
 
 public enum Message {
     UM("""

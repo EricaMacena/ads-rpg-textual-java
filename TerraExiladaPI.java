@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.mycompany.terraexiladapi;
+package terraexiladapi;
 
 import java.awt.Desktop;
 import java.net.URI;
@@ -59,7 +55,6 @@ public class TerraExiladaPI {
                 Message.OITENTA_E_CINCO.toString(),
                 "for (int i = 1; i < 10; i++)"
         });
-
     }
 
     private static String[] alternativasDoDesafio(DesafioId desafioId) {

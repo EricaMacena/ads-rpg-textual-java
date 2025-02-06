@@ -1,4 +1,4 @@
-package com.mycompany.terraexiladapi;
+package terraexiladapi;
 
 public enum Urls {
     CONTEUDO_BASICO("https://mega.nz/file/EH1CzSLD#KaThOiB5DsSRpmE2kBG9ZpY9l3q0hrV5fv5rYPN_J9A"),
