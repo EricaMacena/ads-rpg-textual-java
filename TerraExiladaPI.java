@@ -14,6 +14,58 @@ import java.util.*;
 public class TerraExiladaPI {
     private static final Scanner ler = new Scanner(System.in);
     private static final List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
+    private static final Map<DesafioId, String[]> mapaDeAlternativas = new HashMap<>();
+
+    static {
+        mapaDeAlternativas.put(DesafioId.A1, new String[]{
+                "for (int i = 0; i <= 8; i = i + 1)",
+                Message.OITENTA_E_SEIS.toString(),
+                "for (int i = 2; i < 8;  i = i + 2)",
+                "for (int i = 2; i <= 8; i = i + 1)"
+        });
+        mapaDeAlternativas.put(DesafioId.A2, new String[]{
+                "for (int i = 13; i <= 35; i = i + 11)",
+                "for (int i = 13; i < 35; i = i + 9)",
+                "for (int i = 13; i > 35;  i = i + 15)",
+                "for (int i = 13; i = 35; i = i + 6)"
+        });
+        mapaDeAlternativas.put(DesafioId.B2, new String[]{
+                "for (int i = 29; i <= 47; i = i + 9)",
+                "for (int i = 29; i < 47; i = i + 9)",
+                "for (int i = 29; i > 47;  i = i + 10)",
+                "for (int i = 29; i = 47; i = i + 6)"
+        });
+        mapaDeAlternativas.put(DesafioId.D1, new String[]{
+                "Comparar dois valores",
+                "Criar uma função matemática",
+                "Realizar operações matemáticas com variáveis",
+                "Repetir uma sequência de comandos por um número determinado de vezes"
+        });
+        mapaDeAlternativas.put(DesafioId.D2, new String[]{
+                "for(inicialização; atualização; incrementar ou decrementar)",
+                "for(condição de continuação; inicialização; incrementar ou decrementar)",
+                Message.OITENTA_E_TRES.toString(),
+                "for(inicialização; incrementar ou decrementar; condição de continuação)"
+        });
+        mapaDeAlternativas.put(DesafioId.D3, new String[]{
+                "Determinar o valor inicial da variável de controle do loop",
+                Message.OITENTA_E_QUATRO.toString(),
+                "Atualizar o valor da variável de controle do loop em cada iteração",
+                "Definir a ação a ser realizada em cada iteração do loop"
+        });
+        mapaDeAlternativas.put(DesafioId.D4, new String[]{
+                "for (int i = 0; i <= 10; i++)",
+                "for (int i = 1; i <= 10; i++)",
+                Message.OITENTA_E_CINCO.toString(),
+                "for (int i = 1; i < 10; i++)"
+        });
+
+    }
+
+    private static String[] alternativasDoDesafio(DesafioId desafioId) {
+        if (desafioId == null) throw new IllegalArgumentException("Desafio passado como argumento não pode ser nulo!");
+        return mapaDeAlternativas.get(desafioId);
+    }
 
     //---------> Material em PDF Loop For
     public static void conteudoBasico() {
@@ -71,12 +123,7 @@ public class TerraExiladaPI {
     //1° Desafio sobre conteúdo básico do 'For'
     public static void Desafio1() {
         //Alternativas
-        String[] alternativas = {
-                "Comparar dois valores",
-                "Criar uma função matemática",
-                "Realizar operações matemáticas com variáveis",
-                "Repetir uma sequência de comandos por um número determinado de vezes"
-        };
+        String[] alternativas = alternativasDoDesafio(DesafioId.D1);
 
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
@@ -117,12 +164,7 @@ public class TerraExiladaPI {
     //2° Desafio sobre conteúdo básico do 'For'
     public static void Desafio2() {
         //Alternativas
-        String[] alternativas = {
-                "for(inicialização; atualização; incrementar ou decrementar)",
-                "for(condição de continuação; inicialização; incrementar ou decrementar)",
-                Message.OITENTA_E_TRES.toString(),
-                "for(inicialização; incrementar ou decrementar; condição de continuação)"
-        };
+        String[] alternativas = alternativasDoDesafio(DesafioId.D2);
 
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
@@ -163,12 +205,7 @@ public class TerraExiladaPI {
     //3º Desafio sobre o conteúdo intermediário do 'For'
     public static void Desafio3() {
         //Array com as alternativas
-        String[] alternativas = {
-                "Determinar o valor inicial da variável de controle do loop",
-                Message.OITENTA_E_QUATRO.toString(),
-                "Atualizar o valor da variável de controle do loop em cada iteração",
-                "Definir a ação a ser realizada em cada iteração do loop"
-        };
+        String[] alternativas = alternativasDoDesafio(DesafioId.D3);
 
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
@@ -209,12 +246,7 @@ public class TerraExiladaPI {
     //4º Teste sobre o conteúdo avançado do 'For'
     public static void Desafio4() {
         //Array com as alternativas
-        String[] alternativas = {
-                "for (int i = 0; i <= 10; i++)",
-                "for (int i = 1; i <= 10; i++)",
-                Message.OITENTA_E_CINCO.toString(),
-                "for (int i = 1; i < 10; i++)"
-        };
+        String[] alternativas = alternativasDoDesafio(DesafioId.D4);
 
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
@@ -252,50 +284,85 @@ public class TerraExiladaPI {
 
     }
 
-    public static void DesafioFinalA1() {
-        String[] alternativas = new String[]{
-                "for (int i = 0; i <= 8; i = i + 1)",
-                "for (int i = 2; i <= 8; i = i + 2)",
-                "for (int i = 2; i < 8;  i = i + 2)",
-                "for (int i = 2; i <= 8; i = i + 1)"
-        };
+    private static void desafioFinalA2eB2(int tentativas, DesafioId desafioId) {
+        if (desafioId == null) throw new IllegalArgumentException("DesafioId informado não deve ser nulo");
+        String[] alternativas = alternativasDoDesafio(desafioId);
+        System.out.println("\n" + Message.CINQUENTA_E_NOVE);
+        System.out.println(listarAlternativas(alternativas));
 
-        int tentativas = 0;
+        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
+        String resposta1 = validarAlternativa(options);
+
+        if (resposta1.equalsIgnoreCase("a")) {
+            System.out.println("\n" + Message.SESSENTA);
+            ConclusaoFinal1();
+        } else {
+            tentativas = tentativas + 1;
+            System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
+            while (tentativas < 5) {
+                System.out.println("\n" + Message.CINQUENTA_E_NOVE);
+
+                System.out.println(listarAlternativas(alternativas));
+
+                //Enquanto a resposta não for uma alternativa válida, continua pedindo.
+                resposta1 = validarAlternativa(options);
+
+                if (resposta1.equalsIgnoreCase("a")) {
+                    System.out.println("\n" + Message.SESSENTA);
+                    ConclusaoFinal1();
+                    break;
+                } else {
+                    tentativas = tentativas + 1;
+                    System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
+                }
+
+            }
+
+        }
+
+        if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
+            System.out.println("\n" + Message.SESSENTA);
+            ConclusaoFinal1();
+        } else if (!resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
+            System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
+            ConclusaoFinal2();
+        }
+
+    }
+
+    public static void DesafioFinalA1() {
+        String[] alternativas = alternativasDoDesafio(DesafioId.A1);
+        String[] sequences = {"2 4 6 8", "13, 24 e 31"};
 
         System.out.println("\n\nLOGIN: GOVERNO");
-        System.out.println("SENHA: _ _ _ _");
+        System.out.println("SENHA:" + " _".repeat(sequences[0].split(" ").length));
 
-        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
-        System.out.print(listarAlternativas(alternativas));
+        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", sequences[0]);
+        System.out.println(listarAlternativas(alternativas));
 
-        // Enquanto a resposta não for uma alternativa válida, continua pedindo.
+        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta = validarAlternativa(options);
 
+        int tentativas = 0;
         if (resposta.equalsIgnoreCase("b")) {
-            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", sequences[0]);
             System.out.println(Message.CINQUENTA_E_SETE);
-            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "13, 24 e 31");
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", sequences[1]);
             DesafioFinalA2(tentativas);
         } else {
             tentativas = tentativas + 1;
             System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
-            alternativas = new String[]{
-                    "for (int i = 0; i <= 8; i = i + 1)",
-                    Message.OITENTA_E_SEIS.toString(),
-                    "for (int i = 2; i < 8;  i = i + 2)",
-                    "for (int i = 2; i <= 8; i = i + 1)"
-            };
             while (tentativas < 5) {
-                System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
-                System.out.print(listarAlternativas(alternativas));
+                System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", sequences[0]);
+                System.out.println(listarAlternativas(alternativas));
 
                 //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta = validarAlternativa(options);
 
                 if (resposta.equalsIgnoreCase("b")) {
-                    System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+                    System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", sequences[0]);
                     System.out.println(Message.CINQUENTA_E_SETE);
-                    System.out.printf(Message.CINQUENTA_E_OITO + "\n", "13, 24 e 31");
+                    System.out.printf(Message.CINQUENTA_E_OITO + "\n", sequences[1]);
                     DesafioFinalA2(tentativas);
                     break;
                 } else {
@@ -307,9 +374,9 @@ public class TerraExiladaPI {
 
         if (resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
             System.out.printf(Message.OITENTA_E_SETE + "\n", tentativas);
-            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", sequences[0]);
             System.out.println(Message.CINQUENTA_E_SETE);
-            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "13, 24 e 31");
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", sequences[1]);
             DesafioFinalA2(tentativas);
         } else if (!resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
             System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
@@ -319,114 +386,58 @@ public class TerraExiladaPI {
     }
 
     public static void DesafioFinalA2(int tentativas) {
-        String[] alternativas = new String[]{
-                "for (int i = 13; i <= 35; i = i + 11)",
-                "for (int i = 13; i < 35; i = i + 9)",
-                "for (int i = 13; i > 35;  i = i + 15)",
-                "for (int i = 13; i = 35; i = i + 6)"
-        };
-
-        System.out.println("\n" + Message.CINQUENTA_E_NOVE);
-        System.out.print(listarAlternativas(alternativas));
-
-        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        String resposta1 = validarAlternativa(options);
-
-        if (resposta1.equalsIgnoreCase("a")) {
-            System.out.println("\n" + Message.SESSENTA);
-            ConclusaoFinal1();
-        } else {
-            tentativas = tentativas + 1;
-            System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
-            while (tentativas < 5) {
-                System.out.println("\n" + Message.CINQUENTA_E_NOVE);
-                alternativas = new String[]{
-                        "for (int i = 13; i <= 35; i = i + 11)",
-                        "for (int i = 13; i < 35; i = i + 9)",
-                        "for (int i = 13; i > 35;  i = i + 15)",
-                        "for (int i = 13; i = 35; i = i + 6)"
-                };
-                System.out.print(listarAlternativas(alternativas));
-
-                //Enquanto a resposta não for uma alternativa válida, continua pedindo.
-                resposta1 = validarAlternativa(options);
-
-                if (resposta1.equalsIgnoreCase("a")) {
-                    System.out.println("\n" + Message.SESSENTA);
-                    ConclusaoFinal1();
-                    break;
-                } else {
-                    tentativas = tentativas + 1;
-                    System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
-                }
-
-            }
-
-        }
-
-        if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.println("\n" + Message.SESSENTA);
-            ConclusaoFinal1();
-        } else if (!resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
-            ConclusaoFinal2();
-        }
-
+        desafioFinalA2eB2(tentativas, DesafioId.A2);
     }
 
-    //Desafio final 2 parte 1
     public static void DesafioFinalB1() {
-        String[] alternativas = new String[]{
-                "for (int i = 0; i <= 8; i = i + 1)",
-                "for (int i = 2; i <= 8; i = i + 2)",
-                "for (int i = 2; i < 8;  i = i + 2)",
-                "for (int i = 2; i <= 8; i = i + 1)"
-        };
-
-        int tentativas = 0;
+        String[] alternativas = alternativasDoDesafio(DesafioId.A1);
+        String[] sequences = {"2 4 6 8", "29, 38 e 47"};
 
         System.out.println("\n\nLOGIN: GOVERNO");
-        System.out.println("SENHA: _ _ _ _");
+        System.out.println("SENHA:" + " _".repeat(sequences[0].split(" ").length));
 
-        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
-        System.out.print(listarAlternativas(alternativas));
+        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", sequences[0]);
+        System.out.println(listarAlternativas(alternativas));
 
         //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta = validarAlternativa(options);
 
+        int tentativas = 0;
         if (resposta.equalsIgnoreCase("b")) {
-            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", sequences[0]);
             System.out.println(Message.CINQUENTA_E_SETE);
-            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "29, 38 e 47");
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", sequences[1]);
             DesafioFinalB2(tentativas);
         } else {
             tentativas = tentativas + 1;
             System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
             while (tentativas < 5) {
-                System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
-                System.out.print(listarAlternativas(alternativas));
+                System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", sequences[0]);
+                System.out.println(listarAlternativas(alternativas));
 
                 //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta = validarAlternativa(options);
 
                 if (resposta.equalsIgnoreCase("b")) {
-                    System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+                    System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", sequences[0]);
                     System.out.println(Message.CINQUENTA_E_SETE);
-                    System.out.printf(Message.CINQUENTA_E_OITO + "\n", "29, 38 e 47");
+                    System.out.printf(Message.CINQUENTA_E_OITO + "\n", sequences[1]);
                     DesafioFinalB2(tentativas);
                     break;
                 } else {
                     tentativas = tentativas + 1;
                     System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
                 }
+
             }
+
         }
 
         if (resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
             System.out.printf(Message.OITENTA_E_SETE + "\n", tentativas);
-            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", sequences[0]);
             System.out.println(Message.CINQUENTA_E_SETE);
-            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "29, 38 e 47");
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", sequences[1]);
             DesafioFinalB2(tentativas);
         } else if (!resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
             System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
@@ -436,52 +447,7 @@ public class TerraExiladaPI {
     }
 
     public static void DesafioFinalB2(int tentativas) {
-        String[] alternativas = new String[]{
-                "for (int i = 29; i <= 47; i = i + 9)",
-                "for (int i = 29; i < 47; i = i + 9)",
-                "for (int i = 29; i > 47;  i = i + 10)",
-                "for (int i = 29; i = 47; i = i + 6)"
-        };
-
-        System.out.println("\n" + Message.CINQUENTA_E_NOVE);
-        System.out.print(listarAlternativas(alternativas));
-
-        //Enquanto a resposta não for uma alternativa válida, continua pedindo.
-        String resposta1 = validarAlternativa(options);
-
-        if (resposta1.equalsIgnoreCase("a")) {
-            System.out.println("\n" + Message.SESSENTA);
-            ConclusaoFinal1();
-        } else {
-            tentativas = tentativas + 1;
-            System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
-            while (tentativas < 5) {
-                System.out.println("\n" + Message.CINQUENTA_E_NOVE);
-                System.out.print(listarAlternativas(alternativas));
-
-                //Enquanto a resposta não for uma alternativa válida, continua pedindo.
-                resposta1 = validarAlternativa(options);
-
-                if (resposta1.equalsIgnoreCase("a")) {
-                    System.out.println("\n" + Message.SESSENTA);
-                    ConclusaoFinal1();
-                    break;
-                } else {
-                    tentativas = tentativas + 1;
-                    System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
-                }
-
-            }
-
-        }
-
-        if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.println("\n" + Message.SESSENTA);
-            ConclusaoFinal1();
-        } else if (!resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
-            ConclusaoFinal2();
-        }
+        desafioFinalA2eB2(tentativas, DesafioId.B2);
     }
 
     public static void ConclusaoFinal1() {
