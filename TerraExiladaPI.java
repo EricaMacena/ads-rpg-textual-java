@@ -6,14 +6,9 @@ package com.mycompany.terraexiladapi;
 
 import java.awt.Desktop;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 /**
- *
  * @author Erica
  */
 public class TerraExiladaPI {
@@ -333,7 +328,7 @@ public class TerraExiladaPI {
                 System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
                 System.out.print(listarAlternativas(alternativas));
 
-                // Enquanto a resposta não for uma alternativa válida, continua pedindo.
+                //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta = validarAlternativa(options);
 
                 if (resposta.equalsIgnoreCase("b")) {
@@ -425,6 +420,7 @@ public class TerraExiladaPI {
                         "for (int i = 13; i = 35; i = i + 6)"
                 };
                 System.out.print(listarAlternativas(alternativas));
+
                 //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta1 = validarAlternativa(options);
 
