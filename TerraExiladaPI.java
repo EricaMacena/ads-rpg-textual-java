@@ -332,7 +332,7 @@ public class TerraExiladaPI {
 
     public static void DesafioFinalA1() {
         String[] alternativas = alternativasDoDesafio(DesafioId.A1);
-        String[] sequences = {"2 4 6 8", "13, 24 e 31"};
+        String[] sequences = {"2 4 6 8", "13, 24 e 35"};
 
         System.out.println("\n\nLOGIN: GOVERNO");
         System.out.println("SENHA:" + " _".repeat(sequences[0].split(" ").length));
