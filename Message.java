@@ -311,7 +311,7 @@ public enum Message {
     OITENTA_E_SETE("----> Você atingiu o limite máximo de erros: %s"),
     ;
 
-    private String text;
+    private final String text;
 
     Message(String text) {
         this.text = text;
