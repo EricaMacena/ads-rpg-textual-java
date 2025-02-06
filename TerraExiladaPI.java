@@ -566,7 +566,7 @@ public class TerraExiladaPI {
         System.out.printf("\n" + Message.TRINTA_E_DOIS + "\n", "Debug");
         System.out.println("\n" + TextMenus.UM);
 
-        int opcao = obterOpcao("Digite 1 ou 2: ", "Valor informado incorreto!\n", 1, 2);
+        int opcao = obterOpcao("Digite 1 ou 2: ", "Valor informado incorreto!\n", 2);
 
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.TRINTA_E_TRES + "\n", nome);
@@ -579,56 +579,56 @@ public class TerraExiladaPI {
         System.out.println("\n" + Message.TRINTA_E_SETE + "\n");
 
         //Acessar material
-        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 1), "Informe apenas 1 para ler o material", 1, 1);
+        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 1), "Informe apenas 1 para ler o material", 1);
 
         conteudoBasico();
 
         //Fazer o 1° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 1, 1, "SIM");
 
-        obterOpcao("Digite 1 para fazer o 1° teste: ", "Informe apenas 1 para acessar o 1º teste", 1, 1);
+        obterOpcao("Digite 1 para fazer o 1° teste: ", "Informe apenas 1 para acessar o 1º teste", 1);
 
         Desafio1();
 
         //Fazer o 2° Desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 2, 1, "SIM");
 
-        obterOpcao("Digite 1 para fazer o 2° teste: ", "Informe apenas 1 para acessar o 2º teste", 1, 1);
+        obterOpcao("Digite 1 para fazer o 2° teste: ", "Informe apenas 1 para acessar o 2º teste", 1);
 
         Desafio2();
 
         System.out.printf("\n\n" + Message.TRINTA_E_OITO + "\n", "Debug", 1);
 
         //Ler o conteúdo intermediário sobre 'For'
-        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 2), "Informe apenas 1 para ler o 2º material", 1, 1);
+        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 2), "Informe apenas 1 para ler o 2º material", 1);
 
         conteudoIntermediario();
 
         //Fazer o 3° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 3, 1, "SIM");
 
-        obterOpcao("Digite 1 para fazer o 3° teste: ", "Informe apenas 1 para acessar o 3º teste", 1, 1);
+        obterOpcao("Digite 1 para fazer o 3° teste: ", "Informe apenas 1 para acessar o 3º teste", 1);
 
         Desafio3();
 
         System.out.printf("\n\n" + Message.QUARENTA + "\n", "Debug");
 
         //Ler o conteúdo avançado sobre 'For'
-        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 3), "Informe apenas 1 para acessar o 3º teste", 1, 1);
+        obterOpcao(Message.TRINTA_E_NOVE.toString().formatted(1, 3), "Informe apenas 1 para acessar o 3º teste", 1);
 
         conteudoAvancado();
 
         //Fazer o 4° desafio
         System.out.printf("\n\n" + TextMenus.DOIS + "\n", 4, 1, "SIM");
 
-        obterOpcao(Message.QUARENTA_E_UM.toString().formatted(1, 4), "Informe apenas 1 para acessar o 4º teste", 1, 1);
+        obterOpcao(Message.QUARENTA_E_UM.toString().formatted(1, 4), "Informe apenas 1 para acessar o 4º teste", 1);
 
         Desafio4();
 
         System.out.printf("\n" + Message.QUARENTA_E_DOIS + "\n", "Debug");
         System.out.printf(TextMenus.TRES + "\n", 1, 2, 1, 1, 2, 2);
 
-        opcao = obterOpcao("Digite 1 ou 2: ", "Digite apenas 1 ou 2!\n", 1, 2);
+        opcao = obterOpcao("Digite 1 ou 2: ", "Digite apenas 1 ou 2!\n", 2);
 
         if (opcao == 1) {
             System.out.printf("\n\n" + Message.QUARENTA_E_TRES + "\n", 1, nome);
