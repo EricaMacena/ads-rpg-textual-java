@@ -199,6 +199,116 @@ public enum Message {
             serão alertados e invadirão imediatamente o local."""),
     CINQUENTA_E_QUATRO("%s: %s, essa é a senha para logar."),
     CINQUENTA_E_CINCO("Diante do computador, você se prepara mentalmente para enfrentar o desafio que se apresenta."),
+    CINQUENTA_E_SEIS("""
+            LOGIN: GOVERNO
+            SENHA: %s
+            LOGANDO ......
+                       
+
+            Depois de acessar o sistema do governo, você se depara com uma série de
+            arquivos e começa a vasculhar para encontrar informações que possam
+            ajudar abrir o portão."""),
+    CINQUENTA_E_SETE("""
+
+            Após horas de busca, tem um arquivo suspeito que parece estar codificado.
+            Usando suas habilidades em programação, conseguiu descriptografá-lo e
+            descobriu que se trata de um documento com informações sobre o sistema
+            de segurança do governo."""),
+    CINQUENTA_E_OITO("""
+
+            O arquivo contém várias informações sobre os departamentos do prédio.
+            Porém, uma parte específica chamou sua atenção: A combinação numérica
+            para abrir o portão.
+            Era um mistério até aquele momento, mas agora está diante de seus olhos,
+            como uma chave para a liberdade.\s
+            A senha é: %s."""),
+    CINQUENTA_E_NOVE("Qual \"for\" gera a sequência da senha para abrir o portão? "),
+    SESSENTA("""
+            ----------> SENHA CORRETA
+            ----------> ABRINDO PORTÃO"""),
+    SESSENTA_E_UM("""
+            ----> Tentativa %s
+            ----> Acesso Negado"""),
+    SESSENTA_E_DOIS("""
+            %s Tentativas de Invasão:
+            SISTEMA DE SEGURANÇA ATIVADO"""),
+    SESSENTA_E_TRES("""
+
+            Com a senha correta, o portão é aberto e uma onda de alívio
+            percorre o ambiente.
+            Os rebeldes aproveitam a oportunidade para fugir, correndo em direção
+            à liberdade que tanto almejavam. A sensação de dever cumprido e a
+            gratidão pelo sucesso do plano de fuga se misturam em seus corações."""),
+    SESSENTA_E_QUATRO("""
+
+            Enquanto vocês observam os rebeldes desaparecendo no horizonte,
+            seguindo seus caminhos individuais em busca de liberdade, você se
+            sente profundamente satisfeito por ter desempenhado um papel importante
+            na transformação de suas vidas."""),
+    SESSENTA_E_CINCO("""
+
+            Enquanto se afastam do local, rumo a um futuro incerto, vocês olham
+            para trás e sorriem, agradecendo a força da parceria que os levou até ali.
+            Uma amizade forte e duradoura foi formada, e vocês sabem que sempre poderão
+            contar um com o outro nas adversidades que ainda estão por vir.
+            Juntos, vocês caminham em direção a um novo horizonte."""),
+    SESSENTA_E_SEIS("-----> FIM <-----"),
+    SESSENTA_E_SETE("""
+
+            Após a ativação do alarme e a invasão dos guardas,\s
+            a situação se torna caótica.
+            Tiros por todo local, crianças choram e você sente o peso
+            da responsabilidade e da falha.
+            Em meio ao tumulto, você e %s se veem encurralados,
+            buscando uma saída para a situação desesperadora."""),
+    SESSENTA_E_OITO("""
+
+            Durante a tentativa de fuga em meio ao caos
+            %s e você acaba sendo capturados pelos guardas."""),
+    SESSENTA_E_NOVE("""
+
+            Governador: Não quero eles vivos e quanto a\s
+            %s, coloque-a em cativeiro."""),
+    SETENTA("""
+            Embora a história tenha tomado um rumo sombrio
+            e triste, a coragem e determinação que você e %s
+            demonstraram ao longo da jornada não serão esquecidas.
+            Os rebeldes continuarão em busca da liberdade e vingança."""),
+
+    SETENTA_E_UM("""
+            -----> Você esgotou suas tentativas.
+            A resposta correta é: Repetir uma sequência de comandos por um número determinado de vezes."""),
+    SETENTA_E_DOIS("""
+            ------> Você esgotou suas tentativas.
+
+            As partes que compõem o for são:
+            1. Inicialização
+            2. Condição de continuação
+            3. Incremento/Decremento"""),
+    SETENTA_E_TRES("""
+            -------> Você esgotou suas tentativas.
+            A condição de continuação em um loop "for" é uma expressão
+            que determina se o loop deve continuar executando ou se deve
+            ser encerrado.
+            Essa condição é verificada a cada iteração do loop e, se for
+            avaliada como falsa, o loop será interrompido e a execução
+            será transferida para o próximo trecho após o loop."""),
+    SETENTA_E_QUATRO("------> Você esgotou suas tentativas."),
+    SETENTA_E_CINCO("""
+            Você errou.
+            ----> Tentativa %s"""),
+    SETENTA_E_SEIS("Qual a função do comando \"for\" em linguagens de programação?"),
+    SETENTA_E_SETE("Repetir uma sequência de comandos por um número determinado de vezes"),
+    SETENTA_E_OITO("Quais são as 3 partes que compõem a estrutura \"for\"?"),
+    SETENTA_E_NOVE("Qual é o papel da \"condição\" em um loop \"for\"?"),
+    OITENTA("Parabéns, você acertou!"),
+    OITENTA_E_UM("Como você define um loop \"for\" que mostre 10 números, começando com o zero?"),
+    OITENTA_E_DOIS("Como você define um loop \"for\" que faça a senha: %s"),
+    OITENTA_E_TRES("for(inicialização; condição de continuação; incrementar ou decrementar)"),
+    OITENTA_E_QUATRO("Verificar se o loop deve continuar executando"),
+    OITENTA_E_CINCO("for (int i = 0; i < 10; i++)"),
+    OITENTA_E_SEIS("for (int i = 2; i <= 8; i = i + 2)"),
+    OITENTA_E_SETE("----> Você atingiu o limite máximo de erros: %s"),
     ;
 
     private String text;

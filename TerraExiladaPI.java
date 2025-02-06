@@ -84,7 +84,7 @@ public class TerraExiladaPI {
 
         //Exibe as alternativas
         System.out.println("\n--- Desafio 1 ---");
-        System.out.println("Qual a função do comando \"for\" em linguagens de programação?");
+        System.out.println(Message.SETENTA_E_SEIS);
         System.out.println(listarAlternativas(alternativas));
 
         int tentativas = 0;
@@ -96,22 +96,21 @@ public class TerraExiladaPI {
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
-            if (alternativas[escolha].contains("Repetir uma sequência de comandos por um número determinado de vezes")) {
-                System.out.println("Parabéns, você acertou!");
+            if (alternativas[escolha].contains(Message.SETENTA_E_SETE.toString())) {
+                System.out.println(Message.OITENTA);
                 break;
             } else {
                 erros++;
-                System.out.println("Você errou.");
-                System.out.println("----> Tentativa " + erros);
+                System.out.printf(Message.SETENTA_E_CINCO + "\n", erros);
                 Collections.shuffle(Arrays.asList(alternativas));
-                System.out.println("\n\nQual a função do comando \"for\" em linguagens de programação? ");
+                System.out.println("\n\n" + Message.SETENTA_E_SEIS);
                 System.out.println(listarAlternativas(alternativas));
                 tentativas++;
             }
         }
 
         if (tentativas >= 3) {
-            System.out.println("-----> Você esgotou suas tentativas. \nA resposta correta é: Repetir uma sequência de comandos por um número determinado de vezes.");
+            System.out.println(Message.SETENTA_E_UM);
         }
 
     }
@@ -122,7 +121,7 @@ public class TerraExiladaPI {
         String[] alternativas = {
                 "for(inicialização; atualização; incrementar ou decrementar)",
                 "for(condição de continuação; inicialização; incrementar ou decrementar)",
-                "for(inicialização; condição de continuação; incrementar ou decrementar)",
+                Message.OITENTA_E_TRES.toString(),
                 "for(inicialização; incrementar ou decrementar; condição de continuação)"
         };
 
@@ -133,7 +132,7 @@ public class TerraExiladaPI {
 
         //Exibe as alternativas
         System.out.println("\n--- Desafio 2 ---");
-        System.out.println("Quais são as 3 partes que compõem a estrutura for ? ");
+        System.out.println(Message.SETENTA_E_OITO);
         System.out.println(listarAlternativas(alternativas));
 
         int tentativas = 0;
@@ -145,28 +144,21 @@ public class TerraExiladaPI {
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
-            if (alternativas[escolha].contains("for(inicialização; condição de continuação; incrementar ou decrementar)")) {
-                System.out.println("Parabéns, você acertou!");
+            if (alternativas[escolha].contains(Message.OITENTA_E_TRES.toString())) {
+                System.out.println(Message.OITENTA);
                 break;
             } else {
                 erros++;
-                System.out.println("Você errou.");
-                System.out.println("----> Tentativa " + erros);
+                System.out.printf(Message.SETENTA_E_CINCO + "\n", erros);
                 Collections.shuffle(Arrays.asList(alternativas));
-                System.out.println("\n\nQuais são as 3 partes que compõem a estrutura for ? ");
+                System.out.println("\n\n" + Message.SETENTA_E_OITO);
                 System.out.println(listarAlternativas(alternativas));
                 tentativas++;
             }
         }
 
         if (tentativas >= 3) {
-            System.out.println("""
-                    ------> Você esgotou suas tentativas.
-
-                    As partes que compõem o for são:
-                    1. Inicialização
-                    2. Condição de continuação
-                    3. Incremento/Decremento""");
+            System.out.println(Message.SETENTA_E_DOIS);
         }
 
     }
@@ -176,7 +168,7 @@ public class TerraExiladaPI {
         //Array com as alternativas
         String[] alternativas = {
                 "Determinar o valor inicial da variável de controle do loop",
-                "Verificar se o loop deve continuar executando",
+                Message.OITENTA_E_QUATRO.toString(),
                 "Atualizar o valor da variável de controle do loop em cada iteração",
                 "Definir a ação a ser realizada em cada iteração do loop"
         };
@@ -188,7 +180,7 @@ public class TerraExiladaPI {
 
         //Exibe as alternativas
         System.out.println("\n--- Desafio 3 ---");
-        System.out.println("Qual é o papel da \"condição\" em um loop for ? ");
+        System.out.println(Message.SETENTA_E_NOVE);
         System.out.println(listarAlternativas(alternativas));
 
         int tentativas = 0;
@@ -200,29 +192,21 @@ public class TerraExiladaPI {
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
-            if (alternativas[escolha].contains("Verificar se o loop deve continuar executando")) {
-                System.out.println("Parabéns, você acertou!");
+            if (alternativas[escolha].contains(Message.OITENTA_E_QUATRO.toString())) {
+                System.out.println(Message.OITENTA);
                 break;
             } else {
                 erros++;
-                System.out.println("Você errou.");
-                System.out.println("----> Tentativa " + erros);
+                System.out.printf(Message.SETENTA_E_CINCO + "\n", erros);
                 Collections.shuffle(Arrays.asList(alternativas));
-                System.out.println("\n\nQual é o papel da \"condição\" em um loop for ? ");
+                System.out.println("\n\n" + Message.SETENTA_E_NOVE);
                 System.out.println(listarAlternativas(alternativas));
                 tentativas++;
             }
         }
 
         if (tentativas >= 3) {
-            System.out.println("""
-                    -------> Você esgotou suas tentativas.
-                    A condição de continuação em um loop "for" é uma expressão
-                    que determina se o loop deve continuar executando ou se deve
-                    ser encerrado.
-                    Essa condição é verificada a cada iteração do loop e, se for
-                    avaliada como falsa, o loop será interrompido e a execução
-                    será transferida para o próximo trecho após o loop.""");
+            System.out.println(Message.SETENTA_E_TRES);
         }
 
     }
@@ -233,7 +217,7 @@ public class TerraExiladaPI {
         String[] alternativas = {
                 "for (int i = 0; i <= 10; i++)",
                 "for (int i = 1; i <= 10; i++)",
-                "for (int i = 0; i < 10; i++)",
+                Message.OITENTA_E_CINCO.toString(),
                 "for (int i = 1; i < 10; i++)"
         };
 
@@ -244,7 +228,7 @@ public class TerraExiladaPI {
 
         //Exibe as alternativas
         System.out.println("\n--- Desafio 4 ---");
-        System.out.println("Como você define um loop for que mostre 10 números, começando com o zero ? ");
+        System.out.println(Message.OITENTA_E_UM);
         System.out.println(listarAlternativas(alternativas));
 
         int tentativas = 0;
@@ -256,22 +240,21 @@ public class TerraExiladaPI {
 
             int escolha = resposta.toUpperCase().charAt(0) - 65;
 
-            if (alternativas[escolha].contains("for (int i = 0; i < 10; i++)")) {
-                System.out.println("Parabéns, você acertou!");
+            if (alternativas[escolha].contains(Message.OITENTA_E_CINCO.toString())) {
+                System.out.println(Message.OITENTA);
                 break;
             } else {
                 erros++;
-                System.out.println("Você errou.");
-                System.out.println("----> Tentativa " + erros);
+                System.out.printf(Message.SETENTA_E_CINCO + "\n", erros);
                 Collections.shuffle(Arrays.asList(alternativas));
-                System.out.println("\n\nComo você define um loop for que mostre 10 números, começando com o zero ? ");
+                System.out.println("\n\n" + Message.OITENTA_E_UM);
                 System.out.println(listarAlternativas(alternativas));
                 tentativas++;
             }
         }
 
         if (tentativas >= 3) {
-            System.out.println("------> Você esgotou suas tentativas.");
+            System.out.println(Message.SETENTA_E_QUATRO);
         }
 
     }
@@ -285,103 +268,61 @@ public class TerraExiladaPI {
                 "for (int i = 2; i < 8;  i = i + 2)",
                 "for (int i = 2; i <= 8; i = i + 1)"
         };
+
         int tentativas = 0;
 
         System.out.println("\n\nLOGIN: GOVERNO");
         System.out.println("SENHA: _ _ _ _");
 
-        System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
+        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
         System.out.print(listarAlternativas(alternativas));
 
         // Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta = validarAlternativa(options);
 
         if (resposta.equalsIgnoreCase("b")) {
-            System.out.println("\n\nLOGIN: GOVERNO");
-            System.out.println("SENHA: 2 4 6 8");
-            System.out.println("LOGANDO ......\n");
-            System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                    + "\narquivos e começa a vasculhar para encontrar informações que possam"
-                    + "\najudar abrir o portão.");
-            System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                    + "\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                    + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                    + "\nde segurança do governo.");
-            System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                    + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                    + "\npara abrir o portão."
-                    + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                    + "\ncomo uma chave para a liberdade. "
-                    + "\nA senha é: 13, 24 e 31.");
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.println(Message.CINQUENTA_E_SETE);
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "13, 24 e 31");
             DesafioFinalA2(tentativas);
         } else {
             tentativas = tentativas + 1;
-            System.out.println("----> Tentativa " + tentativas);
-            System.out.println("----> Acesso Negado");
+            System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
             alternativas = new String[]{
                     "for (int i = 0; i <= 8; i = i + 1)",
-                    "for (int i = 2; i <= 8; i = i + 2)",
+                    Message.OITENTA_E_SEIS.toString(),
                     "for (int i = 2; i < 8;  i = i + 2)",
                     "for (int i = 2; i <= 8; i = i + 1)"
             };
             while (tentativas < 5) {
-                System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
+                System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
                 System.out.print(listarAlternativas(alternativas));
 
                 //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta = validarAlternativa(options);
 
                 if (resposta.equalsIgnoreCase("b")) {
-                    System.out.println("\n\nLOGIN: GOVERNO");
-                    System.out.println("SENHA: 2 4 6 8");
-                    System.out.println("LOGANDO ......\n");
-                    System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                            + "\narquivos e começa a vasculhar para encontrar informações que possam"
-                            + "\najudar abrir o portão.");
-                    System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                            + "\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                            + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                            + "\nde segurança do governo.");
-                    System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                            + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                            + "\npara abrir o portão."
-                            + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                            + "\ncomo uma chave para a liberdade. "
-                            + "\nA senha é: 13, 24 e 31.");
+                    System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+                    System.out.println(Message.CINQUENTA_E_SETE);
+                    System.out.printf(Message.CINQUENTA_E_OITO + "\n", "13, 24 e 31");
                     DesafioFinalA2(tentativas);
                     break;
                 } else {
                     tentativas = tentativas + 1;
-                    System.out.println("----> Tentativa " + tentativas);
-                    System.out.println("----> Acesso Negado");
+                    System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
                 }
             }
         }
 
-
         if (resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
-            System.out.println("----> Você atingiu o limite máximo de erros:" +tentativas);
-               System.out.println("\n\nLOGIN: GOVERNO");
-             System.out.println("SENHA: 2 4 6 8");
-             System.out.println("LOGANDO ......\n"); 
-             System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                     +"\narquivos e começa a vasculhar para encontrar informações que possam"
-                     + "\najudar abrir o portão.");
-             System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                     +"\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                     + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                     + "\nde segurança do governo.");
-             System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                     + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                     + "\npara abrir o portão."
-                     + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                     + "\ncomo uma chave para a liberdade. "
-                     + "\nA senha é: 13, 24 e 31.");
-                DesafioFinalA2(tentativas);
-            } else if(!resposta.equalsIgnoreCase("b") && (tentativas == 5))  {
-             System.out.println(tentativas + " Tentativas de Invasão:");
-             System.out.println("SISTEMA DE SEGURANÇA ATIVADO"); 
-             ConclusaoFinal2();
+            System.out.printf(Message.OITENTA_E_SETE + "\n", tentativas);
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.println(Message.CINQUENTA_E_SETE);
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "13, 24 e 31");
+            DesafioFinalA2(tentativas);
+        } else if (!resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
+            System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
+            ConclusaoFinal2();
         }
 
     }
@@ -396,23 +337,20 @@ public class TerraExiladaPI {
                 "for (int i = 13; i = 35; i = i + 6)"
         };
 
-        System.out.println("\nQual for gera a senha para abrir o portão ? ");
-
+        System.out.println("\n" + Message.CINQUENTA_E_NOVE);
         System.out.print(listarAlternativas(alternativas));
 
         //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta1 = validarAlternativa(options);
 
         if (resposta1.equalsIgnoreCase("a")) {
-            System.out.println("\n----------> SENHA CORRETA");
-            System.out.println("----------> ABRINDO PORTÃO");
+            System.out.println("\n" + Message.SESSENTA);
             ConclusaoFinal1();
         } else {
             tentativas = tentativas + 1;
-            System.out.println("----> Tentativa " + tentativas);
-            System.out.println("----> Acesso Negado");
+            System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
             while (tentativas < 5) {
-                System.out.println("\nQual for gera a sequência da senha para abrir o portão ? ");
+                System.out.println("\n" + Message.CINQUENTA_E_NOVE);
                 alternativas = new String[]{
                         "for (int i = 13; i <= 35; i = i + 11)",
                         "for (int i = 13; i < 35; i = i + 9)",
@@ -425,14 +363,12 @@ public class TerraExiladaPI {
                 resposta1 = validarAlternativa(options);
 
                 if (resposta1.equalsIgnoreCase("a")) {
-                    System.out.println("\n----------> SENHA CORRETA");
-                    System.out.println("----------> ABRINDO PORTÃO");
+                    System.out.println("\n" + Message.SESSENTA);
                     ConclusaoFinal1();
                     break;
                 } else {
                     tentativas = tentativas + 1;
-                    System.out.println("----> Tentativa " + tentativas);
-                    System.out.println("----> Acesso Negado");
+                    System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
                 }
 
             }
@@ -440,12 +376,10 @@ public class TerraExiladaPI {
         }
 
         if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.println("\n----------> SENHA CORRETA");
-            System.out.println("----------> ABRINDO PORTÃO");
+            System.out.println("\n" + Message.SESSENTA);
             ConclusaoFinal1();
         } else if (!resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.println(tentativas + " Tentativas de Invasão:");
-            System.out.println("SISTEMA DE SEGURANÇA ATIVADO");
+            System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
             ConclusaoFinal2();
         }
 
@@ -455,12 +389,6 @@ public class TerraExiladaPI {
     public static void DesafioFinalB1() {
         List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
-        int tentativas = 0;
-
-        System.out.println("\n\nLOGIN: GOVERNO");
-        System.out.println("SENHA: _ _ _ _");
-
-        System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
         String[] alternativas = new String[]{
                 "for (int i = 0; i <= 8; i = i + 1)",
                 "for (int i = 2; i <= 8; i = i + 2)",
@@ -468,101 +396,54 @@ public class TerraExiladaPI {
                 "for (int i = 2; i <= 8; i = i + 1)"
         };
 
+        int tentativas = 0;
+
+        System.out.println("\n\nLOGIN: GOVERNO");
+        System.out.println("SENHA: _ _ _ _");
+
+        System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
         System.out.print(listarAlternativas(alternativas));
+
         //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta = validarAlternativa(options);
 
         if (resposta.equalsIgnoreCase("b")) {
-            System.out.println("\n\nLOGIN: GOVERNO");
-            System.out.println("SENHA: 2 4 6 8");
-            System.out.println("LOGANDO ......\n");
-            System.out.println("""
-
-                    Depois de acessar o sistema do governo, você se depara com uma série de
-                    arquivos e começa a vasculhar para encontrar informações que possam
-                    ajudar abrir o portão.""");
-            System.out.println("""
-
-                    Após horas de busca, tem um arquivo suspeito que parece esta codificado.
-                    Usando suas habilidades em programação, conseguiu descriptografá-lo e
-                    descobriu que se trata de um documento com informações sobre o sistema
-                    de segurança do governo.""");
-            System.out.println("""
-
-                    O arquivo contém várias informações sobre os departamentos do prédio.
-                    Porém, uma parte específica chamou sua atenção: A combinação numérica
-                    para abrir o portão.
-                    Era um mistério até aquele momento, mas agora está diante de seus olhos,
-                    como uma chave para a liberdade.\s
-                    A senha é: 29, 38 e 47.""");
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.println(Message.CINQUENTA_E_SETE);
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "29, 38 e 47");
             DesafioFinalB2(tentativas);
         } else {
             tentativas = tentativas + 1;
-            System.out.println("----> Tentativa " + tentativas);
-            System.out.println("----> Acesso Negado");
+            System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
             while (tentativas < 5) {
-                System.out.println("\nComo você define um loop for que faça a senha: 2 4 6 8 ");
+                System.out.printf("\n" + Message.OITENTA_E_DOIS + "\n", "2 4 6 8");
                 System.out.print(listarAlternativas(alternativas));
 
                 //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta = validarAlternativa(options);
 
                 if (resposta.equalsIgnoreCase("b")) {
-                    System.out.println("\n\nLOGIN: GOVERNO");
-                    System.out.println("SENHA: 2 4 6 8");
-                    System.out.println("LOGANDO ......\n");
-                    System.out.println("""
-
-                            Depois de acessar o sistema do governo, você se depara com uma série de
-                            arquivos e começa a vasculhar para encontrar informações que possam
-                            ajudar abrir o portão.""");
-                    System.out.println("""
-
-                            Após horas de busca, tem um arquivo suspeito que parece esta codificado.
-                            Usando suas habilidades em programação, conseguiu descriptografá-lo e
-                            descobriu que se trata de um documento com informações sobre o sistema
-                            de segurança do governo.""");
-                    System.out.println("""
-
-                            O arquivo contém várias informações sobre os departamentos do prédio.
-                            Porém, uma parte específica chamou sua atenção: A combinação numérica
-                            para abrir o portão.
-                            Era um mistério até aquele momento, mas agora está diante de seus olhos,
-                            como uma chave para a liberdade.\s
-                            A senha é: 29, 38 e 47.""");
+                    System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+                    System.out.println(Message.CINQUENTA_E_SETE);
+                    System.out.printf(Message.CINQUENTA_E_OITO + "\n", "29, 38 e 47");
                     DesafioFinalB2(tentativas);
                     break;
                 } else {
                     tentativas = tentativas + 1;
-                    System.out.println("----> Tentativa " + tentativas);
-                    System.out.println("----> Acesso Negado");
+                    System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
                 }
             }
         }
 
         if (resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
-             System.out.println("----> Você atingiu o limite máximo de erros:" +tentativas);
-             System.out.println("\n\nLOGIN: GOVERNO");
-             System.out.println("SENHA: 2 4 6 8");
-             System.out.println("LOGANDO ......\n"); 
-             System.out.println("\nDepois de acessar o sistema do governo, você se depara com uma série de"
-                              + "\narquivos e começa a vasculhar para encontrar informações que possam"
-                              + "\najudar abrir o portão.");
-             System.out.println("\nApós horas de busca, tem um arquivo suspeito que parece esta codificado."
-                              + "\nUsando suas habilidades em programação, conseguiu descriptografá-lo e"
-                              + "\ndescobriu que se trata de um documento com informações sobre o sistema"
-                              + "\nde segurança do governo.");
-             System.out.println("\nO arquivo contém várias informações sobre os departamentos do prédio."
-                              + "\nPorém, uma parte específica chamou sua atenção: A combinação numérica"
-                              + "\npara abrir o portão."
-                              + "\nEra um mistério até aquele momento, mas agora está diante de seus olhos,"
-                              + "\ncomo uma chave para a liberdade. "
-                              + "\nA senha é: 29, 38 e 47.");
-                DesafioFinalB2(tentativas);
-            } else if(!resposta.equalsIgnoreCase("b") && (tentativas == 5))  {
-             System.out.println(tentativas + " Tentativas de Invasão:");
-             System.out.println("SISTEMA DE SEGURANÇA ATIVADO"); 
-             ConclusaoFinal2();
+            System.out.printf(Message.OITENTA_E_SETE + "\n", tentativas);
+            System.out.printf("\n\n" + Message.CINQUENTA_E_SEIS + "\n", "2 4 6 8");
+            System.out.println(Message.CINQUENTA_E_SETE);
+            System.out.printf(Message.CINQUENTA_E_OITO + "\n", "29, 38 e 47");
+            DesafioFinalB2(tentativas);
+        } else if (!resposta.equalsIgnoreCase("b") && (tentativas == 5)) {
+            System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
+            ConclusaoFinal2();
         }
 
     }
@@ -577,36 +458,32 @@ public class TerraExiladaPI {
                 "for (int i = 29; i = 47; i = i + 6)"
         };
 
-        System.out.println("\nQual for gera a senha para abrir o portão ? ");
+        System.out.println("\n" + Message.CINQUENTA_E_NOVE);
         System.out.print(listarAlternativas(alternativas));
 
         //Enquanto a resposta não for uma alternativa válida, continua pedindo.
         String resposta1 = validarAlternativa(options);
 
         if (resposta1.equalsIgnoreCase("a")) {
-            System.out.println("\n----------> SENHA CORRETA");
-            System.out.println("----------> ABRINDO PORTÃO");
+            System.out.println("\n" + Message.SESSENTA);
             ConclusaoFinal1();
         } else {
             tentativas = tentativas + 1;
-            System.out.println("----> Tentativa " + tentativas);
-            System.out.println("----> Acesso Negado");
+            System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
             while (tentativas < 5) {
-                System.out.println("\nQual for gera a sequência da senha para abrir o portão ? ");
+                System.out.println("\n" + Message.CINQUENTA_E_NOVE);
                 System.out.print(listarAlternativas(alternativas));
 
                 //Enquanto a resposta não for uma alternativa válida, continua pedindo.
                 resposta1 = validarAlternativa(options);
 
                 if (resposta1.equalsIgnoreCase("a")) {
-                    System.out.println("\n----------> SENHA CORRETA");
-                    System.out.println("----------> ABRINDO PORTÃO");
+                    System.out.println("\n" + Message.SESSENTA);
                     ConclusaoFinal1();
                     break;
                 } else {
                     tentativas = tentativas + 1;
-                    System.out.println("----> Tentativa " + tentativas);
-                    System.out.println("----> Acesso Negado");
+                    System.out.printf(Message.SESSENTA_E_UM + "\n", tentativas);
                 }
 
             }
@@ -614,85 +491,27 @@ public class TerraExiladaPI {
         }
 
         if (resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.println("\n----------> SENHA CORRETA");
-            System.out.println("----------> ABRINDO PORTÃO");
+            System.out.println("\n" + Message.SESSENTA);
             ConclusaoFinal1();
         } else if (!resposta1.equalsIgnoreCase("a") && (tentativas == 5)) {
-            System.out.println(tentativas + " Tentativas de Invasão:");
-            System.out.println("SISTEMA DE SEGURANÇA ATIVADO");
+            System.out.printf(Message.SESSENTA_E_DOIS + "\n", tentativas);
             ConclusaoFinal2();
         }
     }
-        
-        
-        
-        
-        
-        public static void ConclusaoFinal1(){
-        System.out.println("\nCom a senha correta, o portão é aberto e uma onda de alívio"
-                + "\npercorre o ambiente."
-                + "\nOs rebeldes aproveitam a oportunidade para fugir, correndo em direção"
-                + "\nà liberdade que tanto almejavam. A sensação de dever cumprido e a"
-                + "\ngratidão pelo sucesso do plano de fuga se misturam em seus corações.");
-        
-        System.out.println("\nEnquanto vocês observam os rebeldes desaparecendo no horizonte,"
-                + "\nseguindo seus caminhos individuais em busca de liberdade, você se"
-                + "\nsente profundamente satisfeito por ter desempenhado um papel importante"
-                + "\nna transformação de suas vidas.");
-        
-        System.out.println("\nEnquanto se afastam do local, rumo a um futuro incerto, vocês olham"
-                + "\npara trás e sorriem, agradecendo a força da parceria que os levou até ali."
-                + "\nUma amizade forte e duradoura foi formada, e vocês sabem que sempre poderão"
-                + "\ncontar um com o outro nas adversidades que ainda estão por vir."
-                + "\nJuntos, vocês caminham em direção a um novo horizonte.");
-        
-        System.out.println("""
 
-                Enquanto vocês observam os rebeldes desaparecendo no horizonte,
-                seguindo seus caminhos individuais em busca de liberdade, você se
-                sente profundamente satisfeito por ter desempenhado um papel importante
-                na transformação de suas vidas.""");
-
-        System.out.println("""
-
-                Enquanto se afastam do local, rumo a um futuro incerto, vocês olham
-                para trás e sorriem, agradecendo a força da parceria que os levou até ali.
-                Uma amizade forte e duradoura foi formada, e vocês sabem que sempre poderão
-                contar um com o outro nas adversidades que ainda estão por vir.
-                Juntos, vocês caminham em direção a um novo horizonte.""");
-
-        System.out.println("\n\n-----> FIM <-----");
-
+    public static void ConclusaoFinal1() {
+        System.out.println(Message.SESSENTA_E_TRES);
+        System.out.println(Message.SESSENTA_E_QUATRO);
+        System.out.println(Message.SESSENTA_E_CINCO);
+        System.out.println("\n\n" + Message.SESSENTA_E_SEIS);
     }
 
     public static void ConclusaoFinal2() {
-        System.out.println("""
-
-                Após a ativação do alarme e a invasão dos guardas,\s
-                a situação se torna caótica.
-                Tiros por todo local, crianças choram e você sente o peso
-                da responsabilidade e da falha.
-                Em meio ao tumulto, você e Debug se veem encurralados,
-                buscando uma saída para a situação desesperadora.""");
-
-        System.out.println("""
-
-                Durante a tentativa de fuga em meio ao caos
-                Debug e você acaba sendo capturados pelos guardas.""");
-
-        System.out.println("""
-
-                Governador: Não quero eles vivos e quanto a\s
-                Cibelle, coloque-a em cativeiro.""");
-
-
-        System.out.println("""
-                Embora a história tenha tomado um rumo sombrio
-                e triste, a coragem e determinação que você e Debug
-                demonstraram ao longo da jornada não serão esquecidas.
-                Os rebeldes continuarão em busca da liberdade e vingança.""");
-
-        System.out.println("\n\n-----> FIM <-----");
+        System.out.printf(Message.SESSENTA_E_SETE + "\n", "Debug");
+        System.out.printf(Message.SESSENTA_E_OITO + "\n", "Debug");
+        System.out.printf(Message.SESSENTA_E_NOVE + "\n", "Cibelle");
+        System.out.printf(Message.SETENTA + "\n", "Debug");
+        System.out.println("\n\n" + Message.SESSENTA_E_SEIS);
     }
 
     private static int obterOpcao(String mensagem, String mensagemErro, int minIncluso, int maxIncluso) {
