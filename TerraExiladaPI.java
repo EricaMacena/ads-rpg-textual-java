@@ -13,6 +13,7 @@ import java.util.*;
  */
 public class TerraExiladaPI {
     private static final Scanner ler = new Scanner(System.in);
+    private static final List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
     //---------> Material em PDF Loop For
     public static void conteudoBasico() {
@@ -77,8 +78,6 @@ public class TerraExiladaPI {
                 "Repetir uma sequência de comandos por um número determinado de vezes"
         };
 
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
-
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
 
@@ -124,8 +123,6 @@ public class TerraExiladaPI {
                 Message.OITENTA_E_TRES.toString(),
                 "for(inicialização; incrementar ou decrementar; condição de continuação)"
         };
-
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
 
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
@@ -173,8 +170,6 @@ public class TerraExiladaPI {
                 "Definir a ação a ser realizada em cada iteração do loop"
         };
 
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
-
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
 
@@ -221,8 +216,6 @@ public class TerraExiladaPI {
                 "for (int i = 1; i < 10; i++)"
         };
 
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
-
         //Muda a ordem
         Collections.shuffle(new ArrayList<>(Arrays.asList(alternativas)));
 
@@ -260,8 +253,6 @@ public class TerraExiladaPI {
     }
 
     public static void DesafioFinalA1() {
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
-
         String[] alternativas = new String[]{
                 "for (int i = 0; i <= 8; i = i + 1)",
                 "for (int i = 2; i <= 8; i = i + 2)",
@@ -328,8 +319,6 @@ public class TerraExiladaPI {
     }
 
     public static void DesafioFinalA2(int tentativas) {
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
-
         String[] alternativas = new String[]{
                 "for (int i = 13; i <= 35; i = i + 11)",
                 "for (int i = 13; i < 35; i = i + 9)",
@@ -387,8 +376,6 @@ public class TerraExiladaPI {
 
     //Desafio final 2 parte 1
     public static void DesafioFinalB1() {
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
-
         String[] alternativas = new String[]{
                 "for (int i = 0; i <= 8; i = i + 1)",
                 "for (int i = 2; i <= 8; i = i + 2)",
@@ -449,8 +436,6 @@ public class TerraExiladaPI {
     }
 
     public static void DesafioFinalB2(int tentativas) {
-        List<String> options = List.of("A", "B", "C", "D", "a", "b", "c", "d");
-
         String[] alternativas = new String[]{
                 "for (int i = 29; i <= 47; i = i + 9)",
                 "for (int i = 29; i < 47; i = i + 9)",
