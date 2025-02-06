@@ -462,20 +462,26 @@ public class TerraExiladaPI {
         System.out.println("\n\n" + Message.SESSENTA_E_SEIS);
     }
 
-    private static int obterOpcao(String mensagem, String mensagemErro, int minIncluso, int maxIncluso) {
+    /**
+     * Essa função retorna um número maior ou igual a 1 e menor ou igual ao 'numeroMaximoIncluso' informado como argumento.
+     *
+     * @param mensagem            String que será exibida a cada solicitação de um número ao usuário.
+     * @param mensagemErro        String que reresenta a mensagem de erro em caso do usuário não informar um valor válido.
+     * @param numeroMaximoIncluso Inteiro que será o limite incluído nas possibilidades que o usuário tem de informar um número.
+     * @return Um número inteiro positivo dentro do intervalo de 1 (inclusive) e 'numeroMaximoIncluso' (inclusive).
+     * @throws IllegalArgumentException Quando um valor menor que 1 é informado no parâmetro 'numeroMaximoIncluso'
+     */
+    private static int obterOpcao(String mensagem, String mensagemErro, int numeroMaximoIncluso) {
         if (mensagemErro == null || mensagemErro.trim().isEmpty()) mensagemErro = "Valor informado Inválido!";
-        if (maxIncluso < minIncluso) {
-            int auxiliar = maxIncluso;
-            maxIncluso = minIncluso;
-            minIncluso = auxiliar;
-        }
+        if (numeroMaximoIncluso < 1)
+            throw new IllegalArgumentException("Valor numerico informado deve ser positivo maior que 1");
 
         int opcao = Integer.MIN_VALUE;
         do {
             try {
                 System.out.print(mensagem);
                 opcao = Integer.parseInt(ler.nextLine());
-                if (opcao < minIncluso || opcao > maxIncluso)
+                if (opcao < 1 || opcao > numeroMaximoIncluso)
                     throw new IllegalArgumentException("Valores fora da faixa permitida!");
             } catch (IllegalArgumentException ex) {
                 System.err.println(mensagemErro);
@@ -485,7 +491,7 @@ public class TerraExiladaPI {
                 } catch (InterruptedException ignored) {
                 }
             }
-        } while (opcao < minIncluso || opcao > maxIncluso);
+        } while (opcao < 1 || opcao > numeroMaximoIncluso);
         return opcao;
     }
 
