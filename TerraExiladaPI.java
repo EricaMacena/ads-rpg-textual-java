@@ -64,23 +64,23 @@ public class TerraExiladaPI {
 
     //---------> Material em PDF Loop For
     public static void conteudoBasico() {
-        conteudo(Urls.CONTEUDO_BASICO);
+        conteudo(URL.CONTEUDO_BASICO);
     }
 
     public static void conteudoIntermediario() {
-        conteudo(Urls.CONTEUDO_INTERMEDIARIO);
+        conteudo(URL.CONTEUDO_INTERMEDIARIO);
     }
 
     public static void conteudoAvancado() {
-        conteudo(Urls.CONTEUDO_AVANCADO);
+        conteudo(URL.CONTEUDO_AVANCADO);
     }
 
     //Material sobre operadores relacionais
     public static void operadoresRelacionais() {
-        conteudo(Urls.OPERADORES_RELACIONAIS);
+        conteudo(URL.OPERADORES_RELACIONAIS);
     }
 
-    private static void conteudo(Urls url) {
+    private static void conteudo(URL url) {
         if (url == null) throw new IllegalArgumentException("Url informada não pode ser nula");
         try {
             Desktop.getDesktop().browse(new URI(url.getUrl()));
